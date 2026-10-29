@@ -2,7 +2,7 @@
 
 Setup snapshot: October 28, 2026. Use live GitHub issue states for current progress.
 
-- Repository: [elisealcala/chore-design](https://github.com/elisealcala/chore-design), private.
+- Repository: [elisealcala/chore-design](https://github.com/elisealcala/chore-design), public as of October 29, 2026.
 - Project: [chore-design — Implementation](https://github.com/users/elisealcala/projects/2), private.
 - Machine-readable identifiers: [tracking.json](../.github/tracking.json).
 
@@ -20,11 +20,11 @@ All stage issues include implementation checklists, acceptance/validation criter
 ## Preparation checks
 
 - Passed: relative document links, all six stage references, tracking identifiers, and preservation of the original supplied brief.
-- Passed: remote repository is private with `main` as its default branch; all 18 preparation files are published.
+- Passed during initial setup: the repository had `main` as its default branch and all 18 preparation files were published. The repository became public on October 29, 2026.
 - Passed: six open issue bodies match their checked-in specifications, with the expected readiness labels and prerequisite links.
 - Project creation, private visibility, description/README, default repository, and addition of all six stage issues were verified in GitHub's browser interface. All six cards are in Todo; their `ready`/`blocked` labels are displayed and the view persisted after reload.
 - Passed: final preparation changes clear Git whitespace checks. There is no runtime to build or test yet.
 
 ## Continuing elsewhere
 
-Clone the repository, open it in your coding assistant, and follow `AGENTS.md` and `docs/HANDOFF.md`. Access to private GitHub resources and pilot source repositories is required when those operations begin; chat history is not.
+Clone the repository, open it in your coding assistant, and follow `AGENTS.md` and `docs/HANDOFF.md`. Access to the private project board and pilot source repositories is required when those operations begin; chat history is not.

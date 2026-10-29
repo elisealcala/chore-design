@@ -16,7 +16,7 @@ These decisions preserve the agreed direction independently of the originating c
 
 ## Implementation defaults
 
-- Use a private repository under the existing `elisealcala` account.
+- Use a public repository under the existing `elisealcala` account. Visibility changed at the user's request on October 29, 2026.
 - Begin with a reusable local skill and registry. Add a service only if a real integration requirement needs one.
 - Use the portfolio as the Bold Typography reference and a Tailwind 3 pilot; use an isolated Studio example as the Tailwind 4 pilot.
 - Keep machine-specific checkout paths and reminder state outside shared committed configuration.

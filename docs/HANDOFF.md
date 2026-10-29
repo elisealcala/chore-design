@@ -7,7 +7,7 @@ Snapshot: October 28, 2026. Check current GitHub issue states and repository cha
 - The roadmap includes six stages, shared CSS/components, reusable design guidance, and reminders for applicable library updates when project work resumes.
 - The initial inventory covers portfolio-nextjs, agents/studio, finances-app, OCC, and JDP. Reinspect their current sources in Stage 1.
 - This repository contains standalone stage specifications, architecture and decision records, project instructions, and contribution templates.
-- Private GitHub repository and implementation board are created. Issues #1–#6 contain the six stages; #1 is ready and #2–#6 wait for their prerequisites. The board displays all six cards and their readiness labels.
+- Public GitHub repository and private implementation board are created. Issues #1–#6 contain the six stages; #1 is ready and #2–#6 wait for their prerequisites. The board displays all six cards and their readiness labels.
 - No shared token generator, registry, agent skill, hook, release, or consumer integration is implemented.
 - No background or recurring automation is scheduled.
 
