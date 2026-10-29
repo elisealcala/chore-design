@@ -1,6 +1,6 @@
 # Stage 2 — CSS foundations
 
-Effort: 2 working days. Dependency: Stage 1 accepted. Status: in progress; Stage 1 is complete.
+Effort: 2 working days. Dependency: Stage 1 accepted. Status: accepted; user reported verification of the remaining accessibility issue.
 
 ## Outcome
 
@@ -33,10 +33,10 @@ Stage 2 child tickets are created only after this plan and its existing project 
 - [x] Clean Tailwind 3 and 4 fixtures compile using the documented adapters.
 - [x] Token output is reproducible and a single source edit reaches both adapters.
 - [x] Text and focus/interaction treatments are checked against their actual supported surfaces.
-- [ ] Light/dark profiles, narrow screens, readable type, and reduced motion are verified with recorded evidence.
+- [x] Light/dark profiles, narrow screens, readable type, and reduced motion are verified with recorded evidence (reduced-motion preference verification reported by user; details not supplied).
 - [x] Tokens are usable in plain CSS without requiring React.
 - [x] Document generated-file ownership and the token change/release procedure.
-- [ ] Update the issue, decisions as needed, and `docs/HANDOFF.md` with commands/results.
+- [x] Update the issue, decisions as needed, and `docs/HANDOFF.md` with commands/results.
 
 ## Scope limits
 

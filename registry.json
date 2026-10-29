@@ -1,0 +1,16 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "chore-design",
+  "homepage": "https://github.com/elisealcala/chore-design",
+  "items": [
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Native button with shared semantic tokens.",
+      "files": [
+        { "path": "registry/ui/button.tsx", "type": "registry:ui" }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,18 @@
 # Stage 3 — Component registry
 
-Effort: 3–4 working days. Dependency: Stage 2 accepted. Initial state: waiting for dependency.
+Effort: 3–4 working days. Dependency: Stage 2 accepted. Status: in progress; Stage 2 accepted based on user verification.
 
 ## Outcome
 
 Provide installable, documented component source and reusable sections through a reproducible shadcn registry build.
+
+## Stage 3 breakdown
+
+1. Pin and validate the shadcn registry build and item metadata.
+2. Implement basic controls and content primitives.
+3. Implement interactive accessible primitives.
+4. Build reusable page compositions and runnable examples.
+5. Verify installation, compatibility, accessibility and baseline capture.
 
 ## Work
 

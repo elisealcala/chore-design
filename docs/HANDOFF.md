@@ -2,17 +2,21 @@
 
 Snapshot: October 29, 2026. Verify live issue states and working-tree changes before continuing.
 
-Publication status: the user explicitly approved publishing the full audit on October 29, 2026, including consumer names, versions, paths, revisions, hashes and working-tree status. Stage 1 artifacts are published; parent #1 and child tickets #7–#10 are complete. Stage 2 is the next implementation task.
+Publication status: the user explicitly approved publishing the full audit on October 29, 2026, including consumer names, versions, paths, revisions, hashes and working-tree status. Stage 1 artifacts are published; parent #1 and child tickets #7–#10 are complete. Stage 2 was accepted after the user reported verifying its remaining accessibility issue. Stage 3 is the current implementation task.
 
-## Stage 2 in progress
+## Stage 2 accepted
 
 Tailwind 4 is now recommended for new projects; Tailwind 3 remains supported. Its generated preset prints a non-blocking recommendation to review an optional upgrade. `pnpm check` passed after this change: 16 package tests, two fixture/package tests, typechecking and both fixture builds; the Tailwind 3 build displayed the notice and completed. Stage 4 must implement a brief, deferrable Tailwind 3 recommendation at session entry after the installed version is verified; that agent notice does not exist yet. See `docs/DECISIONS.md` and `docs/stages/04-agent-and-reminders.md`.
 
-Parent issue #2 is open with sub-issues #11–#15. The pinned pnpm workspace, semantic profile token source, generated CSS and Tailwind 3/4 adapters, optional licensed font assets, fixture builds, and executable v1 schemas are implemented. These packages are private/unreleased and have not been installed in consumer projects. Source uses Node ESM JavaScript with pinned TypeScript 5.9.3 `checkJs` tooling and generated declarations; a TypeScript consumer fixture verifies the package entry point.
+Parent issue #2 and sub-issues #11–#15 are complete. The pinned pnpm workspace, semantic profile token source, generated CSS and Tailwind 3/4 adapters, optional licensed font assets, fixture builds, and executable v1 schemas are implemented. These packages are private/unreleased and have not been installed in consumer projects. Source uses Node ESM JavaScript with pinned TypeScript 5.9.3 `checkJs` tooling and generated declarations; a TypeScript consumer fixture verifies the package entry point.
 
-Detailed evidence: `docs/stage-2/VALIDATION.md`. Validation: Node 22.22.0, pnpm 10.9.0; `pnpm install --frozen-lockfile --offline --store-dir /private/tmp/chore-design-pnpm-store` passed using the existing local store; `pnpm check` passed 15 package tests plus two fixture/package tests and builds for Tailwind 3.4.17 and 4.3.3. Browser smoke checks covered both profiles and themes at 375px and 1440px in both fixtures; 48px controls, no horizontal overflow, 1200px max width and expected colors were observed. Keyboard focus on button/input was checked across both profiles and themes in both versions, and the font loaded. The reduced-motion media rule was inspected, but the browser's OS preference was not set to reduced motion; do not claim that actual preference behavior has been tested. Tailwind 3 emitted an outdated Browserslist data warning.
+Detailed evidence: `docs/stage-2/VALIDATION.md`. Validation: Node 22.22.0, pnpm 10.9.0; `pnpm install --frozen-lockfile --offline --store-dir /private/tmp/chore-design-pnpm-store` passed using the existing local store; `pnpm check` passed 15 package tests plus two fixture/package tests and builds for Tailwind 3.4.17 and 4.3.3. Browser smoke checks covered both profiles and themes at 375px and 1440px in both fixtures; 48px controls, no horizontal overflow, 1200px max width and expected colors were observed. Keyboard focus on button/input was checked across both profiles and themes in both versions, and the font loaded. The assistant inspected the reduced-motion media rule without setting the browser preference; the subsequent preference check was reported by the user without environment or raw outputs. Tailwind 3 emitted an outdated Browserslist data warning.
 
-Next: complete issue #15 by verifying the actual reduced-motion preference in a browser that supports emulation, then update Stage 2 acceptance evidence. Temporary fixture CSS with the media condition replaced by `all` produced 0ms durations in all eight profile/theme/adapter combinations; this simulates a match and does not verify browser/OS preference handling. Issues #11–#14 are complete after their respective published verification. Issue #15 and parent #2 remain open. Re-run `pnpm check` after any changes. Stage 4 will implement adoption freshness, version selection, migrations and transactional upgrades using the Stage 2 validators. Production shadcn component installation remains Stage 3.
+The user reported verifying issue #15 on October 29, 2026; the browser, environment, profile matrix and raw output were not supplied. Temporary fixture CSS with the media condition replaced by `all` produced 0ms durations in all eight profile/theme/adapter combinations; this simulates a match and does not verify browser/OS preference handling. Issues #11–#15 and parent #2 are complete. Re-run `pnpm check` after any changes. Stage 4 will implement adoption freshness, version selection, migrations and transactional upgrades using the Stage 2 validators. Production shadcn component installation remains Stage 3.
+
+## Stage 3 in progress
+
+Parent #3 is in progress; sub-issues #16–#20 are open. `shadcn` 4.21.1 is pinned and `pnpm registry:build` builds an experimental Button artifact. The Button has not been installed in a consumer, compiled with React, or tested for interactive behavior; it is not released. `pnpm check` passed the existing Stage 2 tests after the tool installation. Continue with item metadata, dependencies, clean installation fixtures and component implementation; see `docs/stage-3/VALIDATION.md`. The board was updated with #3 in progress.
 
 ## Completed
 
@@ -26,7 +30,7 @@ Consumer repositories were read-only. Existing changes in agents and finances-ap
 
 PR design-check execution is explicitly tracked in existing Stage 4 issue #4, real PR validation in Stage 5 issue #5, and release/onboarding in Stage 6 issue #6. Stage 1 delivered policy/research only. No new later-stage tickets or paid integrations were created by this scope clarification. Re-estimate Stage 4/pilot effort after selecting the check suite.
 
-Continue **[Stage 2 — CSS foundations, issue #2](https://github.com/elisealcala/chore-design/issues/2)** using the remaining work listed above and `docs/stages/02-css-foundations.md`. Do not mark Stage 2 complete until all acceptance gates and child issues have evidence.
+Continue **[Stage 3 — component registry, issue #3](https://github.com/elisealcala/chore-design/issues/3)** using `docs/stages/03-component-registry.md`. Verify current issue states and complete its acceptance criteria before marking it done.
 
 ## Validation and limits
 

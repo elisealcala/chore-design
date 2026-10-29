@@ -9,13 +9,13 @@ Progress snapshot: October 29, 2026. Use live GitHub issue states for current pr
 | Stage | Issue | Snapshot status | Prerequisite |
 | --- | --- | --- | --- |
 | 1 — Audit and design contract | [#1](https://github.com/elisealcala/chore-design/issues/1) | Complete | None |
-| 2 — CSS foundations | [#2](https://github.com/elisealcala/chore-design/issues/2) | In progress | #1 |
-| 3 — Component registry | [#3](https://github.com/elisealcala/chore-design/issues/3) | Waiting | #2 |
+| 2 — CSS foundations | [#2](https://github.com/elisealcala/chore-design/issues/2) | Complete | #1 |
+| 3 — Component registry | [#3](https://github.com/elisealcala/chore-design/issues/3) | In progress | #2 |
 | 4 — Design agent and update reminders | [#4](https://github.com/elisealcala/chore-design/issues/4) | Waiting | #3 |
 | 5 — Pilot integrations | [#5](https://github.com/elisealcala/chore-design/issues/5) | Waiting | #4 |
 | 6 — Release and adoption | [#6](https://github.com/elisealcala/chore-design/issues/6) | Waiting | #5 |
 
-All stage issues include implementation checklists, acceptance/validation criteria, scope limits, source links, and prerequisite links. Stage 1 and its child tickets #7–#10 are complete. Stage 2 is in progress; stages 3–6 carry `blocked` until their prerequisites are complete. Update labels when dependencies change. Board status records execution state and does not replace prerequisite checks.
+All stage issues include implementation checklists, acceptance/validation criteria, scope limits, source links, and prerequisite links. Stage 1 and its child tickets #7–#10 are complete. Stage 2 is complete based on user-reported verification; Stage 3 is in progress; stages 4–6 carry `blocked` until their prerequisites are complete. Update labels when dependencies change. Board status records execution state and does not replace prerequisite checks.
 
 ## Preparation checks
 
@@ -33,6 +33,10 @@ Clone the repository, open it in your coding assistant, and follow `AGENTS.md` a
 
 The full audit was published with explicit user approval on October 29, 2026. Child issues [#7](https://github.com/elisealcala/chore-design/issues/7), [#8](https://github.com/elisealcala/chore-design/issues/8), [#9](https://github.com/elisealcala/chore-design/issues/9), and [#10](https://github.com/elisealcala/chore-design/issues/10) are sub-issues of #1. Artifacts and validation are linked from README.md and docs/HANDOFF.md. No paid PR reviewer was enabled.
 
-## Stage 2 progress
+## Stage 2 completion
 
-Parent #2 has child issues #11–#15. Workspace tooling, contract validators, semantic tokens and Tailwind fixtures are complete; #15 remains open for actual reduced-motion preference verification. The Stage 2 parent stays in progress until its acceptance gates pass. See docs/stage-2/VALIDATION.md for exact evidence and limits.
+Parent #2 has child issues #11–#15. Workspace tooling, contract validators, semantic tokens and Tailwind fixtures are complete; #15 and parent #2 are closed after user-reported verification of the remaining accessibility issue. See docs/stage-2/VALIDATION.md for exact evidence and limits.
+
+## Stage 3 progress
+
+Parent #3 is in progress with open child issues #16–#20. Registry build setup and an experimental Button are started; see `docs/stage-3/VALIDATION.md` and `docs/HANDOFF.md` for what is and is not verified.

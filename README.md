@@ -2,7 +2,7 @@
 
 Shared design guidance, CSS foundations, and shadcn/ui components for Elizabeth's projects.
 
-**Status: Stage 2 in progress.** Stage 1 audit and contracts are documented. A token generator, v1 validators, and Tailwind 3/4 fixtures are in the repository; registry, design skill, update checker, and consumer integrations remain future work.
+**Status: Stage 3 in progress.** Stage 1 audit and contracts are documented. A token generator, v1 validators, and Tailwind 3/4 fixtures are in the repository; the registry has an experimental first item; the design skill, update checker, and consumer integrations remain future work.
 
 [Repository](https://github.com/elisealcala/chore-design) · [Implementation project](https://github.com/users/elisealcala/projects/2) · [Issues](https://github.com/elisealcala/chore-design/issues) · [Tracking record](docs/TRACKING.md)
 
@@ -13,8 +13,8 @@ Read [AGENTS.md](AGENTS.md), the [current handoff](docs/HANDOFF.md), and the [ro
 | Stage | Specification | Issue | Effort | Dependency |
 | --- | --- | --- | --- | --- |
 | 1 | [Audit and design contract](docs/stages/01-audit-and-contract.md) | [#1](https://github.com/elisealcala/chore-design/issues/1) | 1 day | Complete |
-| 2 | [CSS foundations](docs/stages/02-css-foundations.md) | [#2](https://github.com/elisealcala/chore-design/issues/2) | 2 days | In progress |
-| 3 | [Component registry](docs/stages/03-component-registry.md) | [#3](https://github.com/elisealcala/chore-design/issues/3) | 3–4 days | Stage 2 |
+| 2 | [CSS foundations](docs/stages/02-css-foundations.md) | [#2](https://github.com/elisealcala/chore-design/issues/2) | 2 days | Complete |
+| 3 | [Component registry](docs/stages/03-component-registry.md) | [#3](https://github.com/elisealcala/chore-design/issues/3) | 3–4 days | In progress |
 | 4 | [Design agent and update reminders](docs/stages/04-agent-and-reminders.md) | [#4](https://github.com/elisealcala/chore-design/issues/4) | 2–3 days | Stage 3 |
 | 5 | [Pilot integrations](docs/stages/05-pilot-integrations.md) | [#5](https://github.com/elisealcala/chore-design/issues/5) | 2 days | Stage 4 |
 | 6 | [Release and adoption](docs/stages/06-release-and-adoption.md) | [#6](https://github.com/elisealcala/chore-design/issues/6) | 1–3 days | Stage 5 |
@@ -54,4 +54,4 @@ The implementation instructions live in this repository. No previous chat, attac
 
 ## Development setup
 
-Use Node 22.22.0 and pnpm 10.9.0. Run `pnpm install --frozen-lockfile`, then `pnpm check` to generate tokens, run tests, and build both Tailwind fixtures. See [token usage and font licenses](packages/tokens/README.md). Generated `dist/` files are ignored and must be rebuilt. The packages are private and unreleased; see [the handoff](docs/HANDOFF.md) for remaining Stage 2 gates.
+Use Node 22.22.0 and pnpm 10.9.0. Run `pnpm install --frozen-lockfile`, then `pnpm check` to generate tokens, run tests, and build both Tailwind fixtures. See [token usage and font licenses](packages/tokens/README.md). Generated `dist/` files are ignored and must be rebuilt. The packages are private and unreleased; see [the handoff](docs/HANDOFF.md) for current implementation status.

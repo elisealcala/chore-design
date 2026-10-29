@@ -1,6 +1,6 @@
 # Stage 2 validation snapshot
 
-October 29, 2026. Stage 2 remains in progress; these checks do not establish full compatibility or completion.
+October 29, 2026. Stage 2 is accepted based on the checks below and the user-reported verification of the remaining accessibility issue.
 
 ## Reproducible setup
 
@@ -20,7 +20,11 @@ Using the generated static fixtures in the in-app browser, both Tailwind version
 
 - Zod schema tests cover all v1 record types, invalid values, catalog identity, baseline ownership, references, cycles and migration target checks. Stage 4 still owns runtime adoption-freshness calculation, version selection, migrations and transactional upgrades.
 - The implementation uses Node ESM JavaScript with TypeScript 5.9.3 `checkJs` and generated declarations; implicit-any checking is disabled. A TypeScript consumer fixture checks the exported entry point. Tightening implicit-any checking is future quality work.
-- Verify actual reduced-motion behavior with a browser/environment that can set the preference.
+- The user reports verifying the remaining accessibility issue; detailed environment and outputs were not supplied.
 - A clean workspace copy with no node_modules or dist passed frozen offline install and `pnpm check`; this uses an already-populated store. Separate npm consumers installed the packed tokens tarball and compiled Tailwind 3 and 4 using the packaged CSS and adapters. The test uses fixture-installed Tailwind binaries via local symlinks; it does not prove a fresh online installation on another machine.
 - Re-run `pnpm check` and record any new evidence before closing Stage 2 or its remaining tickets.
 - The packaged Tailwind 3 CSS import initially failed because its importer could not resolve the package export map. Physical package-root CSS forwarding files fixed this; the standalone package regression test now covers both Tailwind versions.
+
+## User verification
+
+On October 29, 2026, the user reported verifying the remaining Stage 2 accessibility issue. No browser, operating system, profile matrix, or raw output was provided; do not represent those details as independently observed. The earlier automated and simulated checks remain as documented above.

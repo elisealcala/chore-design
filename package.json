@@ -12,12 +12,14 @@
     "test": "node --test packages/*/test/*.test.mjs",
     "check": "pnpm typecheck && pnpm build && pnpm test && pnpm fixtures && node --test fixtures/test/*.test.mjs",
     "fixtures": "pnpm --filter \"./fixtures/*\" run build",
-    "typecheck": "pnpm exec tsc --noEmit"
+    "typecheck": "pnpm exec tsc --noEmit",
+    "registry:build": "shadcn build registry.json --output registry/dist"
   },
   "devDependencies": {
     "@types/node": "22.20.4",
     "@types/semver": "7.7.1",
     "semver": "7.7.2",
+    "shadcn": "4.21.1",
     "typescript": "5.9.3",
     "zod": "4.6.5"
   }

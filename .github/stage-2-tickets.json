@@ -1,6 +1,6 @@
 {
   "parent": 2,
-  "status": "in-progress",
+  "status": "completed",
   "tickets": [
     {
       "number": 11,
@@ -30,7 +30,7 @@
       "number": 15,
       "title": "Verify accessibility and responsive behavior",
       "url": "https://github.com/elisealcala/chore-design/issues/15",
-      "status": "open"
+      "status": "completed"
     }
   ]
 }
