@@ -5,27 +5,32 @@
     {
       "number": 11,
       "title": "Set up pinned workspace and development tooling",
-      "url": "https://github.com/elisealcala/chore-design/issues/11"
+      "url": "https://github.com/elisealcala/chore-design/issues/11",
+      "status": "completed"
     },
     {
       "number": 12,
       "title": "Implement v1 design-contract validators",
-      "url": "https://github.com/elisealcala/chore-design/issues/12"
+      "url": "https://github.com/elisealcala/chore-design/issues/12",
+      "status": "completed"
     },
     {
       "number": 13,
       "title": "Generate semantic profile tokens and Tailwind adapters",
-      "url": "https://github.com/elisealcala/chore-design/issues/13"
+      "url": "https://github.com/elisealcala/chore-design/issues/13",
+      "status": "completed"
     },
     {
       "number": 14,
       "title": "Build Tailwind fixtures and font guidance",
-      "url": "https://github.com/elisealcala/chore-design/issues/14"
+      "url": "https://github.com/elisealcala/chore-design/issues/14",
+      "status": "completed"
     },
     {
       "number": 15,
       "title": "Verify accessibility and responsive behavior",
-      "url": "https://github.com/elisealcala/chore-design/issues/15"
+      "url": "https://github.com/elisealcala/chore-design/issues/15",
+      "status": "open"
     }
   ]
 }

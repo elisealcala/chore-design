@@ -19,7 +19,7 @@ Stage 2 child tickets are created only after this plan and its existing project 
 ## Work
 
 - [x] Implement the agreed tooling/layout and document reproducible install/build/check commands.
-- [ ] Implement executable schemas/validators for `docs/stage-1/DATA-CONTRACTS.md`, using its synthetic examples and failure cases; Stage 1 delivered normative field specifications.
+- [x] Implement executable schemas/validators for `docs/stage-1/DATA-CONTRACTS.md`, using its synthetic examples and failure cases; Stage 1 delivered normative field specifications.
 - [x] Define colors and foreground pairs, type/fonts, spacing, container widths, borders, all radius sizes, motion, focus, status, and chart roles.
 - [x] Extract the portfolio's current refinements with attribution to owning source paths; resolve conflicts with the original brief deliberately.
 - [x] Keep brand accent separate from shadcn's subtle interaction-surface roles.
@@ -32,7 +32,7 @@ Stage 2 child tickets are created only after this plan and its existing project 
 
 - [x] Clean Tailwind 3 and 4 fixtures compile using the documented adapters.
 - [x] Token output is reproducible and a single source edit reaches both adapters.
-- [ ] Text and focus/interaction treatments are checked against their actual supported surfaces.
+- [x] Text and focus/interaction treatments are checked against their actual supported surfaces.
 - [ ] Light/dark profiles, narrow screens, readable type, and reduced motion are verified with recorded evidence.
 - [x] Tokens are usable in plain CSS without requiring React.
 - [x] Document generated-file ownership and the token change/release procedure.

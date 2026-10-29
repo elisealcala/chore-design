@@ -2,7 +2,7 @@
 
 Shared design guidance, CSS foundations, and shadcn/ui components for Elizabeth's projects.
 
-**Status: Stage 2 in progress.** Stage 1 audit and contracts are documented. A token generator, v1 validator prototypes, and Tailwind 3/4 fixtures are available locally; registry, design skill, update checker, and consumer integrations remain future work.
+**Status: Stage 2 in progress.** Stage 1 audit and contracts are documented. A token generator, v1 validators, and Tailwind 3/4 fixtures are in the repository; registry, design skill, update checker, and consumer integrations remain future work.
 
 [Repository](https://github.com/elisealcala/chore-design) · [Implementation project](https://github.com/users/elisealcala/projects/2) · [Issues](https://github.com/elisealcala/chore-design/issues) · [Tracking record](docs/TRACKING.md)
 

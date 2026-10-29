@@ -54,6 +54,9 @@ test('checks baseline ownership against project items', async () => {
   assert.equal(verifyProjectBaselines(examples.project,[examples.baseline]),true);
   assert.throws(()=>verifyProjectBaselines(examples.project,[]),/Missing/);
   const b=clone(examples.baseline);b.version='1.0.0';assert.throws(()=>verifyProjectBaselines(examples.project,[b]),/does not match/);
+  const p=clone(examples.project);p.installedItems.push({id:'other',version:'0.1.0',baselineId:'other-0-1-0'});
+  const other=clone(examples.baseline);other.baselineId='other-0-1-0';other.itemId='other';
+  assert.throws(()=>verifyProjectBaselines(p,[examples.baseline,other]),/Overlapping/);
 });
 test('rejects contradictory adoption status and malformed routes',()=>{
   const p=clone(examples.project);p.review.routes=['https://example.com/private'];assert.equal(validate('project',p).success,false);
@@ -66,4 +69,22 @@ test('rejects malformed timestamps, digests, and absolute baseline paths',()=>{
   const r=clone(examples.reminder);r.lastCheck={at:'not-a-timestamp',sourceDigest:null,outcome:'success',latestCompatible:null};assert.equal(validate('reminder',r).success,false);
   let b=clone(examples.baseline);b.files[0].digest='invalid';assert.equal(validate('baseline',b).success,false);
   b=clone(examples.baseline);b.files[0].path='/outside';assert.equal(validate('baseline',b).success,false);
+});
+
+test('validates transaction, catalog and adoption record shapes',()=>{
+  const hash='a'.repeat(64);
+  const transaction={schemaVersion:1,projectId:'demo',targetRelease:'1.0.0',startedAt:'2026-10-29T00:00:00Z',phase:'prepared',originalFiles:[{path:'src/button.tsx',digest:null,recoveryPath:'recovery/button.tsx'}],originalRecordDigest:hash};
+  assert.equal(validate('transaction',transaction).success,true);
+  transaction.originalFiles.push({...transaction.originalFiles[0]}); assert.equal(validate('transaction',transaction).success,false);
+  assert.equal(validate('catalog',{schemaVersion:1,projects:[{projectId:'demo',root:'/tmp/demo'}]}).success,true);
+  const report={schemaVersion:1,generatedAt:'2026-10-29T00:00:00Z',projects:[{projectId:'demo',checkedAt:'2026-10-29T00:00:00Z',sourceRevision:'abc',status:'current',installedTokenRelease:'1.0.0',installedItems:[],targetRelease:'1.0.0',pendingItems:[],evidence:[]}]};
+  assert.equal(validate('adoption',report).success,true);
+  report.projects[0].status='unonboarded';assert.equal(validate('adoption',report).success,false);
+});
+test('validates reminder deferral alternatives and extension namespaces',()=>{
+  const r=clone(examples.reminder);r.deferral={kind:'next-session',sessionId:'session',until:null};assert.equal(validate('reminder',r).success,true);
+  r.deferral={kind:'until',sessionId:null,until:'2026-11-01T00:00:00Z'};assert.equal(validate('reminder',r).success,true);
+  r.skippedReleases=['1.0.0','1.0.0'];assert.equal(validate('reminder',r).success,false);
+  const p=clone(examples.project);p.extensions={local:'value'};assert.equal(validate('project',p).success,false);
+  p.extensions={'example:local':'value'};assert.equal(validate('project',p).success,true);
 });
