@@ -1,21 +1,21 @@
 # GitHub implementation tracking
 
-Setup snapshot: October 28, 2026. Use live GitHub issue states for current progress.
+Progress snapshot: October 29, 2026. Use live GitHub issue states for current progress.
 
 - Repository: [elisealcala/chore-design](https://github.com/elisealcala/chore-design), public as of October 29, 2026.
 - Project: [chore-design — Implementation](https://github.com/users/elisealcala/projects/2), private.
 - Machine-readable identifiers: [tracking.json](../.github/tracking.json).
 
-| Stage | Issue | Initial readiness | Prerequisite |
+| Stage | Issue | Snapshot status | Prerequisite |
 | --- | --- | --- | --- |
-| 1 — Audit and design contract | [#1](https://github.com/elisealcala/chore-design/issues/1) | Ready | None |
-| 2 — CSS foundations | [#2](https://github.com/elisealcala/chore-design/issues/2) | Waiting | #1 |
+| 1 — Audit and design contract | [#1](https://github.com/elisealcala/chore-design/issues/1) | Complete | None |
+| 2 — CSS foundations | [#2](https://github.com/elisealcala/chore-design/issues/2) | Ready | #1 |
 | 3 — Component registry | [#3](https://github.com/elisealcala/chore-design/issues/3) | Waiting | #2 |
 | 4 — Design agent and update reminders | [#4](https://github.com/elisealcala/chore-design/issues/4) | Waiting | #3 |
 | 5 — Pilot integrations | [#5](https://github.com/elisealcala/chore-design/issues/5) | Waiting | #4 |
 | 6 — Release and adoption | [#6](https://github.com/elisealcala/chore-design/issues/6) | Waiting | #5 |
 
-All stage issues include implementation checklists, acceptance/validation criteria, scope limits, source links, and prerequisite links. Stage 1 carries `ready`; later stages carry `blocked` until their prerequisite acceptance criteria are complete. Update labels when dependencies change. Board status records execution state and does not replace prerequisite checks.
+All stage issues include implementation checklists, acceptance/validation criteria, scope limits, source links, and prerequisite links. Stage 1 and its child tickets #7–#10 are complete. Stage 2 carries `ready`; stages 3–6 carry `blocked` until their prerequisites are complete. Update labels when dependencies change. Board status records execution state and does not replace prerequisite checks.
 
 ## Preparation checks
 
@@ -28,3 +28,7 @@ All stage issues include implementation checklists, acceptance/validation criter
 ## Continuing elsewhere
 
 Clone the repository, open it in your coding assistant, and follow `AGENTS.md` and `docs/HANDOFF.md`. Access to the private project board and pilot source repositories is required when those operations begin; chat history is not.
+
+## Stage 1 publication
+
+The full audit was published with explicit user approval on October 29, 2026. Child issues [#7](https://github.com/elisealcala/chore-design/issues/7), [#8](https://github.com/elisealcala/chore-design/issues/8), [#9](https://github.com/elisealcala/chore-design/issues/9), and [#10](https://github.com/elisealcala/chore-design/issues/10) are sub-issues of #1. Artifacts and validation are linked from README.md and docs/HANDOFF.md. No paid PR reviewer was enabled.

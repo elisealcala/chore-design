@@ -2,7 +2,7 @@
 
 Snapshot: October 29, 2026. Verify live issue states and working-tree changes before continuing.
 
-Publication status: Stage 1 artifacts are complete locally. Public publication awaits explicit approval for the consumer audit metadata after automatic approval review rejected the push. Parent #1 and child tickets #7–#10 remain open until publication and final issue updates are complete. Do not start Stage 2 while this handoff step remains pending.
+Publication status: the user explicitly approved publishing the full audit on October 29, 2026, including consumer names, versions, paths, revisions, hashes and working-tree status. Stage 1 artifacts are published; parent #1 and child tickets #7–#10 are complete. Stage 2 is the next implementation task.
 
 ## Completed
 

@@ -3,7 +3,7 @@
   "repositoryUrl": "https://github.com/elisealcala/chore-design",
   "projectUrl": "https://github.com/users/elisealcala/projects/2",
   "projectNumber": 2,
-  "implementationStatus": "stage-1-locally-complete",
+  "implementationStatus": "stage-1-complete",
   "issues": [
     {
       "stage": 1,
@@ -61,5 +61,6 @@
     }
   ],
   "nextStage": 2,
-  "publicationStatus": "pending-explicit-approval"
+  "publicationStatus": "published",
+  "publicationApprovedAt": "2026-10-29"
 }
