@@ -4,6 +4,14 @@ Snapshot: October 29, 2026. Verify live issue states and working-tree changes be
 
 Publication status: the user explicitly approved publishing the full audit on October 29, 2026, including consumer names, versions, paths, revisions, hashes and working-tree status. Stage 1 artifacts are published; parent #1 and child tickets #7–#10 are complete. Stage 2 is the next implementation task.
 
+## Stage 2 in progress
+
+Parent issue #2 is open with sub-issues #11–#15. The pinned pnpm workspace, semantic profile token source, generated CSS and Tailwind 3/4 adapters, optional licensed font assets, fixture builds, and initial executable v1 schemas are implemented. These packages are private/unreleased and have not been installed in consumer projects. Source uses Node ESM JavaScript with pinned TypeScript 5.9.3 `checkJs` tooling and generated declarations; a TypeScript consumer fixture verifies the package entry point.
+
+Detailed evidence: `docs/stage-2/VALIDATION.md`. Validation: Node 22.22.0, pnpm 10.9.0; `pnpm install --frozen-lockfile --offline --store-dir /private/tmp/chore-design-pnpm-store` passed using the existing local store; `pnpm check` passed 13 package tests plus two fixture/package tests and builds for Tailwind 3.4.17 and 4.3.3. Browser smoke checks covered both profiles and themes at 375px and 1440px in both fixtures; 48px controls, no horizontal overflow, 1200px max width and expected colors were observed. Keyboard focus on button/input was checked across both profiles and themes in both versions, and the font loaded. The reduced-motion media rule was inspected, but the browser's OS preference was not set to reduced motion; do not claim that actual preference behavior has been tested. Tailwind 3 emitted an outdated Browserslist data warning.
+
+Next: finish auditing validator coverage against every rule in `docs/stage-1/DATA-CONTRACTS.md` (including remaining nested-array, cross-record, and migration/semantic cases; catalog identity and baseline ownership now have targeted coverage); add meaningful negative tests. Exercise actual reduced-motion preference and repeat package/fixture installation paths and tests on a fresh online environment; current standalone consumer builds use local fixture-installed Tailwind binaries. Review and close child issues only when their acceptance gates have evidence. Production shadcn component installation remains Stage 3.
+
 ## Completed
 
 Stage 1 (parent #1; child issues #7–#10) delivered the current five-consumer inventory, profile requirements, Node/pnpm and fixture strategy, precise v1 field schemas and migration/upgrade semantics, source hashes, synthetic examples, and PR-review/cost research. See `docs/stage-1/VALIDATION.md` and `README.md` for evidence and artifact links.
@@ -16,12 +24,12 @@ Consumer repositories were read-only. Existing changes in agents and finances-ap
 
 PR design-check execution is explicitly tracked in existing Stage 4 issue #4, real PR validation in Stage 5 issue #5, and release/onboarding in Stage 6 issue #6. Stage 1 delivered policy/research only. No new later-stage tickets or paid integrations were created by this scope clarification. Re-estimate Stage 4/pilot effort after selecting the check suite.
 
-Continue with **[Stage 2 — CSS foundations, issue #2](https://github.com/elisealcala/chore-design/issues/2)** when implementation is requested. Read its stage specification and `docs/stage-1/PROFILES-AND-TOOLING.md`. Create the pinned workspace, executable validators for `DATA-CONTRACTS.md`, canonical token source and generated Tailwind 3/4 adapters. Use recorded examples/failure cases; verify actual resolved fixture versions and lockfiles.
+Continue **[Stage 2 — CSS foundations, issue #2](https://github.com/elisealcala/chore-design/issues/2)** using the remaining work listed above and `docs/stages/02-css-foundations.md`. Do not mark Stage 2 complete until all acceptance gates and child issues have evidence.
 
 ## Validation and limits
 
 - Passed: Git whitespace, relative document links, JSON parsing, source-evidence hashes rechecked against five consumers, and synthetic baseline digest/reference integrity.
-- Stage 1 delivered normative specifications. No library runtime, executable schema validator, registry installation, rendered UI review, or consumer build was performed or claimed.
+- Stage 1 delivered normative specifications. Stage 2 has initial executable validators and rendered fixture checks, but no registry installation or consumer build has been performed.
 - No paid PR reviewer, API key, automatic review workflow, or recurring automation was enabled. The PR contract recommends deterministic checks with optional maintainer-requested AI critique; execution is later-stage work.
 - Personal subscription/billing allowances and a per-PR AI price were not established. Recheck official pricing and account settings before enabling model calls.
 

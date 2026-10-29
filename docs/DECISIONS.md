@@ -45,3 +45,9 @@ These decisions preserve the agreed direction independently of the originating c
 - The portfolio config mismatch is resolved as an explicit pilot correction, not an out-of-scope edit to a consumer repository.
 - PR review research recommends automated deterministic checks and optional maintainer-triggered AI critique, with separate provider billing and no paid integration enabled.
 - Exact installed fixture/CLI dependency pins are verified during Stage 2/3 installation; the Stage 1 target support matrix is not a claim of tested library compatibility.
+
+## Stage 2 implementation choices
+
+- Node ESM JavaScript is checked with pinned TypeScript 5.9.3 and produces contract declarations. `checkJs` is enabled with implicit-any checking disabled; tightening it remains follow-up work.
+- Token package CSS includes physical root forwarding files as well as package exports because Tailwind 3's importer does not resolve the export map the same way as Tailwind 4. Packed-consumer builds verify both paths.
+- Tailwind fixtures target 3.4.17 and Studio's lockfile-resolved 4.3.3. Components and consumer integrations remain outside this stage.

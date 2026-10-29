@@ -1,0 +1,31 @@
+{
+  "parent": 2,
+  "status": "in-progress",
+  "tickets": [
+    {
+      "number": 11,
+      "title": "Set up pinned workspace and development tooling",
+      "url": "https://github.com/elisealcala/chore-design/issues/11"
+    },
+    {
+      "number": 12,
+      "title": "Implement v1 design-contract validators",
+      "url": "https://github.com/elisealcala/chore-design/issues/12"
+    },
+    {
+      "number": 13,
+      "title": "Generate semantic profile tokens and Tailwind adapters",
+      "url": "https://github.com/elisealcala/chore-design/issues/13"
+    },
+    {
+      "number": 14,
+      "title": "Build Tailwind fixtures and font guidance",
+      "url": "https://github.com/elisealcala/chore-design/issues/14"
+    },
+    {
+      "number": 15,
+      "title": "Verify accessibility and responsive behavior",
+      "url": "https://github.com/elisealcala/chore-design/issues/15"
+    }
+  ]
+}

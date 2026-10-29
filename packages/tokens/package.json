@@ -1,0 +1,20 @@
+{
+  "name": "@chore-design/tokens",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./fonts.css": "./dist/fonts.css",
+    "./tokens.css": "./dist/tokens.css",
+    "./tailwind-v3": "./dist/tailwind-v3.cjs",
+    "./tailwind-v4.css": "./dist/tailwind-v4.css"
+  },
+  "files": [
+    "dist",
+    "fonts",
+    "README.md",
+    "tokens.css",
+    "tailwind-v4.css",
+    "fonts.css"
+  ]
+}

@@ -1,0 +1,1 @@
+{"name":"@chore-design/fixture-tailwind-3","private":true,"version":"0.0.0","scripts":{"build":"tailwindcss -i input.css -o dist/output.css"},"devDependencies":{"tailwindcss":"3.4.17"}}

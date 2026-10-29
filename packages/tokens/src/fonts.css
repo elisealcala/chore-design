@@ -1,0 +1,4 @@
+/* Fonts are available under SIL Open Font License 1.1; see ../fonts/*-LICENSE.txt. */
+@font-face { font-family: 'Inter Tight'; src: url('../fonts/inter-tight.woff2') format('woff2'); font-style: normal; font-weight: 100 900; font-display: swap; }
+@font-face { font-family: 'JetBrains Mono'; src: url('../fonts/jetbrains-mono.woff2') format('woff2'); font-style: normal; font-weight: 100 800; font-display: swap; }
+@font-face { font-family: 'Playfair Display'; src: url('../fonts/playfair-display-italic.woff2') format('woff2'); font-style: italic; font-weight: 400 900; font-display: swap; }

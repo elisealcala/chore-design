@@ -1,0 +1,24 @@
+{
+  "name": "chore-design",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.9.0",
+  "engines": {
+    "node": ">=22.22.0 <23"
+  },
+  "scripts": {
+    "build": "node packages/tokens/src/generate.mjs && pnpm exec tsc -p tsconfig.types.json",
+    "test": "node --test packages/*/test/*.test.mjs",
+    "check": "pnpm typecheck && pnpm build && pnpm test && pnpm fixtures && node --test fixtures/test/*.test.mjs",
+    "fixtures": "pnpm --filter \"./fixtures/*\" run build",
+    "typecheck": "pnpm exec tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.4",
+    "@types/semver": "7.7.1",
+    "semver": "7.7.2",
+    "typescript": "5.9.3",
+    "zod": "4.6.5"
+  }
+}
