@@ -42,6 +42,8 @@ Inventory additional repositories during onboarding, including projects outside 
 
 Estimated effort: **11–15 working days**, arranged over roughly three weeks for one implementer. This includes 1–2 additional days for update checks, reminders, and their validation. These are planning estimates, not calendar reservations. Full redesigns of existing applications are separate work.
 
+The estimate above is the original baseline. Re-estimate Stage 4 and its pilots when selecting the PR check suite; the PR execution deliverables below are now explicit scope.
+
 | Stage | Effort | Deliverables | Completion evidence |
 | --- | --- | --- | --- |
 | 1. Audit and contract | 1 day | Complete project inventory, stack/version matrix, profile rules, project record schema | Known adopters and compatibility gaps documented with source paths |
@@ -88,6 +90,8 @@ Build registry items with explicit dependencies and portable install paths. The 
 Ship versioned token artifacts and registry releases from the same source. Begin with local build/install fixtures; select remote hosting during the release stage. A remote registry is a delivery step to implement, not an existing connection.
 
 ## Stage 4 — define the agent workflow
+
+PR design checks are an implementation deliverable here: build the reusable deterministic runner/workflow, evidence reports and an optional, disabled-by-default AI critique adapter. Stage 5 proves these checks on real pilot PRs; Stage 6 releases the versioned rules and onboarding workflow. The complete policy and billing boundaries are in `docs/PR-REVIEW-RESEARCH.md`.
 
 The proposed invocation is `$design-orchestrator`. It should support recommending a design, onboarding a project, auditing an existing UI, checking releases, and applying requested updates. Invocation becomes available only after the skill is implemented and installed.
 

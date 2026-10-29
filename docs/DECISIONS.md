@@ -37,6 +37,8 @@ These decisions preserve the agreed direction independently of the originating c
 
 ## Stage 1 resolutions — October 29, 2026
 
+- PR execution ownership is explicit: Stage 4 builds the check runner/workflow and optional AI adapter; Stage 5 validates on pilot PRs; Stage 6 releases rules and onboarding. Research alone does not satisfy these later-stage deliverables. Existing stage issues hold this work; no additional later-stage tickets are created.
+
 - Inventory and adoption gaps are recorded in `docs/stage-1/INVENTORY.md`, with machine-independent source paths and content hashes in `source-evidence.json`.
 - Profiles, Node 22.22.0/pnpm 10.9.0 baseline, workspace ownership and fixture strategy are specified in `docs/stage-1/PROFILES-AND-TOOLING.md`. Consumer package managers remain unchanged.
 - `docs/stage-1/DATA-CONTRACTS.md` defines normative v1 schemas and migration/upgrade semantics. Stage 2 implements executable validators; no runtime schema validation is claimed in Stage 1.

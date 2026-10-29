@@ -14,6 +14,8 @@ Consumer repositories were read-only. Existing changes in agents and finances-ap
 
 ## Next action
 
+PR design-check execution is explicitly tracked in existing Stage 4 issue #4, real PR validation in Stage 5 issue #5, and release/onboarding in Stage 6 issue #6. Stage 1 delivered policy/research only. No new later-stage tickets or paid integrations were created by this scope clarification. Re-estimate Stage 4/pilot effort after selecting the check suite.
+
 Continue with **[Stage 2 — CSS foundations, issue #2](https://github.com/elisealcala/chore-design/issues/2)** when implementation is requested. Read its stage specification and `docs/stage-1/PROFILES-AND-TOOLING.md`. Create the pinned workspace, executable validators for `DATA-CONTRACTS.md`, canonical token source and generated Tailwind 3/4 adapters. Use recorded examples/failure cases; verify actual resolved fixture versions and lockfiles.
 
 ## Validation and limits
