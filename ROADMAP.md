@@ -55,6 +55,8 @@ Stages depend on the preceding contract. Resolve version compatibility before pu
 
 ## Stage 1 — define the design contract
 
+Scope update, October 29: define a portable PR design-review policy and cost boundaries alongside the UI contract. See `docs/PR-REVIEW-RESEARCH.md`. Stage 1 investigates and specifies; agent/pilot stages later implement opt-in execution. Keep model-backed review disabled until its billing route is explicitly selected. Create new implementation tickets for Stage 1 only during this audit.
+
 Record each project's framework, React and Tailwind versions, package manager, style entry point, shadcn setup, component locations, theme handling, and existing conventions. Verify paths: the portfolio currently points `components.json` at `tailwind.config.js`, while the discovered configuration is `tailwind.config.ts`.
 
 Define a per-project `design.json` containing a stable project ID, selected profile, token release, registry release, installed items, intentional overrides, and last review. Store the installed component baselines so upgrades can distinguish project edits from shared changes. Track the last checked release and reminder deferral in local project state. Keep machine-specific checkout paths in a separate local catalog. Capture useful design decisions centrally so the next chat does not depend on conversation history.

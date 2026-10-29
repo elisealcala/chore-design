@@ -11,7 +11,8 @@ Define the shared design contract from current project evidence so later stages 
 - [ ] Reinspect portfolio-nextjs, agents/studio, finances-app, OCC, and JDP; record source paths, stack/tool versions, CSS entry points, component conventions, primitive family, themes, and relevant validation commands.
 - [ ] Identify any additional eligible projects explicitly and distinguish UI consumers from backend-only projects.
 - [ ] Review the original brief and portfolio refinements; define Bold Typography and application-profile requirements with examples and accessibility constraints.
-- [ ] Resolve the portfolio shadcn configuration path mismatch using its current sources.
+- [ ] Resolve the portfolio shadcn path mismatch in the adoption contract: record the exact correction for its pilot while keeping consumer repositories read-only.
+- [ ] Define pull-request design checks, evidence, trigger/billing boundaries, and an opt-in AI review policy based on official documentation.
 - [ ] Choose package manager, supported runtime/tool versions, workspace layout, and clean Tailwind 3/4 fixture strategy. Record the reasons.
 - [ ] Specify the versioned project record, release index, component baseline, local catalog, reminder state, and adoption report schemas, including schema migration behavior.
 - [ ] Define compatible-release selection, partial adoption, override ownership, and upstream contribution rules.

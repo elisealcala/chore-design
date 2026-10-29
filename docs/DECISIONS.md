@@ -16,6 +16,8 @@ These decisions preserve the agreed direction independently of the originating c
 
 ## Implementation defaults
 
+- October 29 scope update: Stage 1 includes the PR-review contract and cost research. Recommend deterministic UI checks plus maintainer-requested AI critique; no paid integration is enabled by this decision. Update the project plan before creating Stage 1 child tickets. No new tickets for later stages during this task.
+
 - Use a public repository under the existing `elisealcala` account. Visibility changed at the user's request on October 29, 2026.
 - Begin with a reusable local skill and registry. Add a service only if a real integration requirement needs one.
 - Use the portfolio as the Bold Typography reference and a Tailwind 3 pilot; use an isolated Studio example as the Tailwind 4 pilot.
