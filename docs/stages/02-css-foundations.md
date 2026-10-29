@@ -4,7 +4,7 @@ Effort: 2 working days. Dependency: Stage 1 accepted. Status: in progress; Stage
 
 ## Outcome
 
-Generate framework-neutral semantic CSS and Tailwind 3/4 adapters from one canonical token source, with Bold Typography and application profiles.
+Generate framework-neutral semantic CSS and Tailwind 3/4 adapters from one canonical token source, with Bold Typography and application profiles. Recommend Tailwind 4 for new projects; keep Tailwind 3 supported and emit a non-blocking migration recommendation when its preset is loaded.
 
 ## Stage 2 breakdown
 

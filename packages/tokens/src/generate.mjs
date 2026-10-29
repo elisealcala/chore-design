@@ -24,7 +24,7 @@ const borderRadius = Object.fromEntries(radiusNames.map(n => [n.slice(7), `var(-
 borderRadius.DEFAULT = 'var(--radius)';
 const fontSize = Object.fromEntries(Object.keys(source.common).filter(n => /^text-(?:xs|sm|base|lg|xl|[2-9]xl)$/.test(n)).map(n => [n.slice(5), `var(--${n})`]));
 const v3 = { theme: { extend: { colors, borderRadius, fontSize, fontFamily: { sans: ['var(--font-sans)'], mono: ['var(--font-mono)'], display: ['var(--font-display)'] }, maxWidth: { design: 'var(--container)' } } } };
-await writeFile(resolve(out, 'tailwind-v3.cjs'), '/* Generated preset. */\nmodule.exports = ' + JSON.stringify(v3, null, 2) + ';\n');
+await writeFile(resolve(out, 'tailwind-v3.cjs'), '/* Generated preset. */\nconsole.warn("[chore-design] Tailwind CSS 3 is supported; Tailwind CSS 4 is recommended for new projects. Review the Tailwind CSS upgrade guide before migrating; no upgrade is required to use this preset.");\nmodule.exports = ' + JSON.stringify(v3, null, 2) + ';\n');
 const textNames = Object.keys(source.common).filter(n => /^text-(?:xs|sm|base|lg|xl|[2-9]xl)$/.test(n));
 const theme = [...textNames.map(name => `  --${name}: var(--${name});`), ...colorNames.map(name => `  --color-${name}: var(--${name});`), ...radiusNames.map(name => `  --${name}: var(--${name});`), '  --font-sans: var(--font-sans);', '  --font-mono: var(--font-mono);', '  --container-design: var(--container);'];
 await writeFile(resolve(out, 'tailwind-v4.css'), '/* Generated Tailwind 4 adapter. */\n@theme inline {\n' + theme.join('\n') + '\n}\n');

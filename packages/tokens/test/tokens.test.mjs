@@ -2,12 +2,19 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, mkdtemp, rm, mkdir, copyFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import { resolve, join } from 'node:path';
 import { tmpdir } from 'node:os';
 
 const src = JSON.parse(await readFile('packages/tokens/src/tokens.json', 'utf8'));
 const hash = data => createHash('sha256').update(data).digest('hex');
+test('Tailwind 3 preset warns about the optional upgrade and remains usable', () => {
+  execFileSync('node', ['packages/tokens/src/generate.mjs']);
+  const result = spawnSync('node', ['-e', "const preset = require('./packages/tokens/dist/tailwind-v3.cjs'); if (!preset.theme.extend.colors) process.exit(1);"], { encoding: 'utf8' });
+  assert.equal(result.status, 0);
+  assert.match(result.stderr, /Tailwind CSS 3 is supported; Tailwind CSS 4 is recommended/);
+  assert.match(result.stderr, /no upgrade is required/);
+});
 test('generation is deterministic and includes all profile colors and radii', async () => {
   execFileSync('node', ['packages/tokens/src/generate.mjs']);
   const files = ['tokens.css', 'tailwind-v3.cjs', 'tailwind-v4.css'].map(n => resolve('packages/tokens/dist', n));

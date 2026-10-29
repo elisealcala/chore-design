@@ -2,6 +2,8 @@
 
 `src/tokens.json` is the canonical source. Run `pnpm build` at the workspace root to generate ignored `dist/tokens.css`, `dist/tailwind-v3.cjs`, `dist/tailwind-v4.css`, and `dist/fonts.css`. Do not edit generated files; change the source, run `pnpm check`, and rebuild both fixtures. No token package has been published.
 
+Tailwind 4 is recommended for new projects. Tailwind 3 remains supported for existing projects: loading its preset prints an informational upgrade notice and does not change dependencies or block builds. Review the [official Tailwind upgrade guide](https://tailwindcss.com/docs/upgrade-guide) and your project compatibility before choosing to migrate.
+
 Use `data-design-profile="bold-typography"` or `"application"` and `data-design-theme="light"` or `"dark"` on the same root element. Include the generated `tokens.css`. Tailwind 3 consumers add the generated preset to their config; Tailwind 4 consumers import the generated adapter after `tailwindcss`. The fixture packages demonstrate each configuration; paths must be adapted to the consuming project's chosen distribution method.
 
 `fonts.css` is optional. It uses the packaged WOFF2 files and includes Inter Tight, JetBrains Mono and italic Playfair Display. The accompanying `fonts/*-LICENSE.txt` files are SIL Open Font License 1.1 and must remain with any redistributed fonts. Assets were copied from the portfolio's `public/fonts`, whose `docs/design-system.md` documents their licenses and subsets. Font families fall back to system fonts when assets are unavailable; applications may supply `--font-design-sans`, `--font-design-mono`, and `--font-design-display`. The application profile uses system-oriented defaults.

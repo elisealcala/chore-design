@@ -13,6 +13,7 @@ Also build the reusable PR design-check runner and CI integration defined in `do
 - [ ] Create the reusable design skill and project instruction template, with portable references to profiles, components, and release metadata.
 - [ ] Support recommendation, onboarding, audit, release review, and explicitly requested upgrades.
 - [ ] Inspect actual project purpose/stack/current UI before selecting a profile or component.
+- [ ] When an onboarded project is confirmed to use Tailwind 3, offer a brief, deferrable recommendation to consider Tailwind 4, without blocking work or automatically upgrading. If the version is unknown, do not guess.
 - [ ] Implement project-record initialization and read-only release/compatibility checks against the Stage 1 contracts.
 - [ ] Implement notice deduplication, next-session default deferral, explicit deferral date, and release skipping.
 - [ ] Distinguish compatible, incompatible, irrelevant, partially adopted, and unknown/offline states.
@@ -30,6 +31,7 @@ Also build the reusable PR design-check runner and CI integration defined in `do
 - [ ] New portfolio, dense dashboard, customized shadcn app, and unsupported-stack scenarios produce justified, traceable recommendations.
 - [ ] A compatible relevant release produces one short notice; current/irrelevant/deferred/skipped releases do not produce unwanted notices.
 - [ ] Incompatible releases and unavailable sources are reported accurately without blocking unrelated project work.
+- [ ] Tailwind 3 detection produces a deferrable recommendation; Tailwind 4 and unknown versions do not produce a false Tailwind 3 warning.
 - [ ] Tests cover per-item versions, local edits, conflicts, failed validation, and interrupted/repeated upgrades.
 - [ ] Instructions and fixtures work from a clean session without the original chat or absolute machine paths.
 - [ ] Document which startup/resume behavior is verified and what still requires the real pilots in Stage 5.

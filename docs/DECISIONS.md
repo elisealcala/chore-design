@@ -46,6 +46,10 @@ These decisions preserve the agreed direction independently of the originating c
 - PR review research recommends automated deterministic checks and optional maintainer-triggered AI critique, with separate provider billing and no paid integration enabled.
 - Exact installed fixture/CLI dependency pins are verified during Stage 2/3 installation; the Stage 1 target support matrix is not a claim of tested library compatibility.
 
+## Tailwind preference — October 29, 2026
+
+- Recommend Tailwind 4 for new projects. Continue supporting and testing the Tailwind 3 adapter for existing consumers; do not upgrade a consumer automatically or require migration to adopt shared design. The Tailwind 3 preset emits a non-blocking upgrade recommendation when loaded. Stage 4 will surface a brief, deferrable recommendation when it can identify an onboarded project using Tailwind 3; do not claim that agent reminder exists yet.
+
 ## Stage 2 implementation choices
 
 - Node ESM JavaScript is checked with pinned TypeScript 5.9.3 and produces contract declarations. `checkJs` is enabled with implicit-any checking disabled; tightening it remains follow-up work.

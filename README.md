@@ -24,7 +24,7 @@ Estimated total: **11–15 working days** for one implementer. No dates or recur
 ## What this will provide
 
 - A reusable design agent that inspects a project's purpose and existing UI before recommending a direction.
-- Shared semantic CSS tokens, with adapters for Tailwind 3 and 4.
+- Shared semantic CSS tokens, with Tailwind 4 recommended for new projects and a supported Tailwind 3 compatibility adapter.
 - A versioned shadcn registry that installs component source into each project's existing structure.
 - Bold Typography as the first profile, with an application profile for denser interfaces.
 - A version check when Codex work starts or resumes in an onboarded project, offering relevant library updates with review, apply, and defer choices.
