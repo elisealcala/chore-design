@@ -1,0 +1,63 @@
+{
+  "repository": "elisealcala/chore-design",
+  "repositoryUrl": "https://github.com/elisealcala/chore-design",
+  "projectUrl": "https://github.com/users/elisealcala/projects/2",
+  "projectNumber": 2,
+  "implementationStatus": "not-started",
+  "issues": [
+    {
+      "stage": 1,
+      "number": 1,
+      "title": "Stage 1 \u2014 Audit and design contract",
+      "url": "https://github.com/elisealcala/chore-design/issues/1",
+      "specification": "docs/stages/01-audit-and-contract.md",
+      "dependsOn": null,
+      "initialState": "ready"
+    },
+    {
+      "stage": 2,
+      "number": 2,
+      "title": "Stage 2 \u2014 CSS foundations",
+      "url": "https://github.com/elisealcala/chore-design/issues/2",
+      "specification": "docs/stages/02-css-foundations.md",
+      "dependsOn": 1,
+      "initialState": "blocked"
+    },
+    {
+      "stage": 3,
+      "number": 3,
+      "title": "Stage 3 \u2014 Component registry",
+      "url": "https://github.com/elisealcala/chore-design/issues/3",
+      "specification": "docs/stages/03-component-registry.md",
+      "dependsOn": 2,
+      "initialState": "blocked"
+    },
+    {
+      "stage": 4,
+      "number": 4,
+      "title": "Stage 4 \u2014 Design agent and update reminders",
+      "url": "https://github.com/elisealcala/chore-design/issues/4",
+      "specification": "docs/stages/04-agent-and-reminders.md",
+      "dependsOn": 3,
+      "initialState": "blocked"
+    },
+    {
+      "stage": 5,
+      "number": 5,
+      "title": "Stage 5 \u2014 Pilot integrations",
+      "url": "https://github.com/elisealcala/chore-design/issues/5",
+      "specification": "docs/stages/05-pilot-integrations.md",
+      "dependsOn": 4,
+      "initialState": "blocked"
+    },
+    {
+      "stage": 6,
+      "number": 6,
+      "title": "Stage 6 \u2014 Release and adoption",
+      "url": "https://github.com/elisealcala/chore-design/issues/6",
+      "specification": "docs/stages/06-release-and-adoption.md",
+      "dependsOn": 5,
+      "initialState": "blocked"
+    }
+  ]
+}
