@@ -1,0 +1,64 @@
+{
+  "purpose": "Synthetic examples for future validators; no artifacts have been released or adopted.",
+  "project": {
+    "schemaVersion": 1,
+    "projectId": "demo",
+    "stack": {
+      "nodeVersion": "22.22.0",
+      "framework": "next",
+      "frameworkVersion": "16.3.8",
+      "reactVersion": "19.2.8",
+      "tailwindVersion": "4.1.0",
+      "primitiveFamily": "radix",
+      "packageManager": "pnpm@10.9.0"
+    },
+    "profile": {
+      "id": "application",
+      "version": "0.1.0"
+    },
+    "tokenRelease": "0.1.0",
+    "registryRelease": "0.1.0",
+    "installedItems": [
+      {
+        "id": "button",
+        "version": "0.1.0",
+        "baselineId": "button-0-1-0"
+      }
+    ],
+    "overrides": [],
+    "review": {
+      "mode": "off",
+      "rulesRelease": null,
+      "uiPaths": [
+        "components"
+      ],
+      "routes": [
+        "/demo"
+      ],
+      "requiredEvidence": []
+    },
+    "lastVerification": null
+  },
+  "baseline": {
+    "schemaVersion": 1,
+    "baselineId": "button-0-1-0",
+    "itemId": "button",
+    "version": "0.1.0",
+    "releaseId": "release-0-1-0",
+    "files": [
+      {
+        "path": "components/button.css",
+        "digest": "52d72c6e47f3821e72426078e82d09999e942872675fa03100913ab7e723ccc6",
+        "source": "/* Synthetic baseline, not a released component. */\n"
+      }
+    ]
+  },
+  "reminder": {
+    "schemaVersion": 1,
+    "projectId": "demo",
+    "lastCheck": null,
+    "lastNotice": null,
+    "deferral": null,
+    "skippedReleases": []
+  }
+}

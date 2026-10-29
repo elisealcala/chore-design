@@ -1,0 +1,126 @@
+[
+  {
+    "project": "portfolio-nextjs",
+    "observedAt": "2026-10-29",
+    "revision": "7130bf5534cea3f42bbd27f2a52c2b68488a7967",
+    "workingTreeDirty": false,
+    "sources": [
+      {
+        "path": "package.json",
+        "sha256": "666caa4a4452defbf899feb3eff8301a4e003c970321de54dc6b938b7634e4c4"
+      },
+      {
+        "path": "components.json",
+        "sha256": "e5dc6c918aa43c052eeb677bd353ff80db5ca5bbd3916da3650d6b7a57a248c0"
+      },
+      {
+        "path": "tailwind.config.ts",
+        "sha256": "c8568349d946e788c3523bad29c566721aa107fafab1309d1bc20c70b3579f6a"
+      },
+      {
+        "path": "src/app/globals.css",
+        "sha256": "b2a55402d0b2bf39882d1e1c295656427b5f782af6322ee0ec741a2089e337b6"
+      },
+      {
+        "path": "src/app/layout.tsx",
+        "sha256": "9d7e7e9fae61e7008d2a6aa39cc39a650d6d1aa980489754e423913feb9c3248"
+      }
+    ]
+  },
+  {
+    "project": "occ",
+    "observedAt": "2026-10-29",
+    "revision": "3d28f89fa134eea77474815c99b28686b9355903",
+    "workingTreeDirty": false,
+    "sources": [
+      {
+        "path": "package.json",
+        "sha256": "58ed93ee15470a4237f8f41b95445fe7162a447927fdf4640ca675f20e67934d"
+      },
+      {
+        "path": "src/app/globals.css",
+        "sha256": "44f58517d2f02a7a6d61be603fb08ba1702e0972ac7ae431788b876b6f55c431"
+      },
+      {
+        "path": "src/app/layout.tsx",
+        "sha256": "14a7e00be80baf7e259c75d3a9b5b7edf6938c8e3e5642b76a62c04b3a751e58"
+      }
+    ]
+  },
+  {
+    "project": "agents/studio",
+    "observedAt": "2026-10-29",
+    "revision": "a5522735e287093403e8783867b788ce7beae4bc",
+    "workingTreeDirty": true,
+    "sources": [
+      {
+        "path": "package.json",
+        "sha256": "8af25b1c31825585aa87a8c2945ebde427461afe4d303285dc74614ac58add62"
+      },
+      {
+        "path": "components.json",
+        "sha256": "a39384a64384ceca47944248c992f4ab4d2ff565cfea3ff8daa89b2fc7b125e2"
+      },
+      {
+        "path": "app/globals.css",
+        "sha256": "3e1f9973d0ee4a45f9bfd860af30614c6243f39ae6984d7937f698ebe6ac61da"
+      },
+      {
+        "path": "app/layout.tsx",
+        "sha256": "1cac292bdfeacb4b87aa2a98cd7ca22af106fefe225d66a7692aeba5dbcb355b"
+      },
+      {
+        "path": "components/ui/button.tsx",
+        "sha256": "08e5f87833c5db8436e89337ebde0f776bcdbf649d3de69fb89be6441ca2e366"
+      }
+    ]
+  },
+  {
+    "project": "finances-app",
+    "observedAt": "2026-10-29",
+    "revision": "5948b05897b71de8d920cd56efc53ce8c6eafc44",
+    "workingTreeDirty": true,
+    "sources": [
+      {
+        "path": "package.json",
+        "sha256": "2223e625e63d9e0015e40b21a048da570cef26eb7d357cdad1a994842c48eee4"
+      },
+      {
+        "path": "components.json",
+        "sha256": "66a3a48694af66913f8cdbb7fb37ebf27ac793e5063acf97f8c1d41c289899bb"
+      },
+      {
+        "path": "src/app/globals.css",
+        "sha256": "7a3626b91e8e1acbc8ee9eaf05f7daff598438ca13c380688e391ebeb65557cf"
+      },
+      {
+        "path": "src/app/layout.tsx",
+        "sha256": "ca78d3e98c333a2f0a3b12346dfb426bc548c3396e1caf0179623df491bc6c39"
+      },
+      {
+        "path": "src/components/ui/button.tsx",
+        "sha256": "10017484a37b7d762c105fae2947d8ec150295c98ea75cc1ca86b8a25043af53"
+      }
+    ]
+  },
+  {
+    "project": "jdp",
+    "observedAt": "2026-10-29",
+    "revision": "185dd31c18c2fe8da47a53d54c87405fb41a7129",
+    "workingTreeDirty": false,
+    "sources": [
+      {
+        "path": "package.json",
+        "sha256": "17abb8a4128265e71e8e43f707fb4c90458cb2c2e3138fc45e780b65f9c1e66c"
+      },
+      {
+        "path": "app/globals.css",
+        "sha256": "3f2407308c5d906567de1c80ace588757b8e7e16024baae2b95101a974c970ac"
+      },
+      {
+        "path": "app/layout.tsx",
+        "sha256": "ea59e5ddadf73964b83a771715f90f106c0bde16324c3db504cefd9f040c8cc8"
+      }
+    ]
+  }
+]

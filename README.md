@@ -2,7 +2,7 @@
 
 Shared design guidance, CSS foundations, and shadcn/ui components for Elizabeth's projects.
 
-**Status: prepared for implementation.** The roadmap and stage specifications are defined. The shared library, design skill, update checker, and project integrations are not implemented yet.
+**Status: Stage 1 completed October 29, 2026.** The audit, profiles, tooling decisions, normative data contracts, and PR-review research are documented. The shared library, design skill, update checker, and project integrations are not implemented yet.
 
 [Repository](https://github.com/elisealcala/chore-design) · [Implementation project](https://github.com/users/elisealcala/projects/2) · [Issues](https://github.com/elisealcala/chore-design/issues) · [Tracking record](docs/TRACKING.md)
 
@@ -12,8 +12,8 @@ Read [AGENTS.md](AGENTS.md), the [current handoff](docs/HANDOFF.md), and the [ro
 
 | Stage | Specification | Issue | Effort | Dependency |
 | --- | --- | --- | --- | --- |
-| 1 | [Audit and design contract](docs/stages/01-audit-and-contract.md) | [#1](https://github.com/elisealcala/chore-design/issues/1) | 1 day | Ready to start |
-| 2 | [CSS foundations](docs/stages/02-css-foundations.md) | [#2](https://github.com/elisealcala/chore-design/issues/2) | 2 days | Stage 1 |
+| 1 | [Audit and design contract](docs/stages/01-audit-and-contract.md) | [#1](https://github.com/elisealcala/chore-design/issues/1) | 1 day | Complete |
+| 2 | [CSS foundations](docs/stages/02-css-foundations.md) | [#2](https://github.com/elisealcala/chore-design/issues/2) | 2 days | Ready after Stage 1 |
 | 3 | [Component registry](docs/stages/03-component-registry.md) | [#3](https://github.com/elisealcala/chore-design/issues/3) | 3–4 days | Stage 2 |
 | 4 | [Design agent and update reminders](docs/stages/04-agent-and-reminders.md) | [#4](https://github.com/elisealcala/chore-design/issues/4) | 2–3 days | Stage 3 |
 | 5 | [Pilot integrations](docs/stages/05-pilot-integrations.md) | [#5](https://github.com/elisealcala/chore-design/issues/5) | 2 days | Stage 4 |
@@ -29,6 +29,11 @@ Estimated total: **11–15 working days** for one implementer. No dates or recur
 - Bold Typography as the first profile, with an application profile for denser interfaces.
 - A version check when Codex work starts or resumes in an onboarded project, offering relevant library updates with review, apply, and defer choices.
 - A path for useful project improvements to return to the shared library.
+
+## Stage 1 results
+
+- [Current inventory](docs/stage-1/INVENTORY.md), [profiles and tooling](docs/stage-1/PROFILES-AND-TOOLING.md), and [data contracts](docs/stage-1/DATA-CONTRACTS.md).
+- [PR review and cost research](docs/PR-REVIEW-RESEARCH.md), [validation evidence](docs/stage-1/VALIDATION.md).
 
 ## Project documents
 
@@ -49,4 +54,4 @@ The implementation instructions live in this repository. No previous chat, attac
 
 ## Development setup
 
-This is currently a documentation repository; there is no application runtime or package installation step. Stage 1 will choose and document the tooling before code is added. Do not run a guessed development command or treat an empty build as evidence of a working library.
+This is currently a documentation repository; there is no application runtime or package installation step. Stage 1 selected Node 22.22.0/pnpm 10.9.0 and documented the workspace and fixture strategy; Stage 2 will create that toolchain. Do not run a guessed development command or treat an empty build as evidence of a working library.

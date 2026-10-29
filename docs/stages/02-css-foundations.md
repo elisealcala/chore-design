@@ -9,6 +9,7 @@ Generate framework-neutral semantic CSS and Tailwind 3/4 adapters from one canon
 ## Work
 
 - [ ] Implement the agreed tooling/layout and document reproducible install/build/check commands.
+- [ ] Implement executable schemas/validators for `docs/stage-1/DATA-CONTRACTS.md`, using its synthetic examples and failure cases; Stage 1 delivered normative field specifications.
 - [ ] Define colors and foreground pairs, type/fonts, spacing, container widths, borders, all radius sizes, motion, focus, status, and chart roles.
 - [ ] Extract the portfolio's current refinements with attribution to owning source paths; resolve conflicts with the original brief deliberately.
 - [ ] Keep brand accent separate from shadcn's subtle interaction-surface roles.

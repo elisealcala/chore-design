@@ -34,3 +34,12 @@ These decisions preserve the agreed direction independently of the originating c
 | Hook integration and fallback | 4–5 | Demonstrate startup/resume behavior and honor the host's trust flow |
 | Artifact hosting and access | 6 | Reproducible installation and immutable releases; choose before publishing instructions |
 | Broader repository inventory | 1 | Register eligible projects explicitly; no UI integration needed for backend-only code |
+
+## Stage 1 resolutions — October 29, 2026
+
+- Inventory and adoption gaps are recorded in `docs/stage-1/INVENTORY.md`, with machine-independent source paths and content hashes in `source-evidence.json`.
+- Profiles, Node 22.22.0/pnpm 10.9.0 baseline, workspace ownership and fixture strategy are specified in `docs/stage-1/PROFILES-AND-TOOLING.md`. Consumer package managers remain unchanged.
+- `docs/stage-1/DATA-CONTRACTS.md` defines normative v1 schemas and migration/upgrade semantics. Stage 2 implements executable validators; no runtime schema validation is claimed in Stage 1.
+- The portfolio config mismatch is resolved as an explicit pilot correction, not an out-of-scope edit to a consumer repository.
+- PR review research recommends automated deterministic checks and optional maintainer-triggered AI critique, with separate provider billing and no paid integration enabled.
+- Exact installed fixture/CLI dependency pins are verified during Stage 2/3 installation; the Stage 1 target support matrix is not a claim of tested library compatibility.

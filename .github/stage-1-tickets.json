@@ -1,0 +1,32 @@
+{
+  "parent": 1,
+  "scope": "stage-1",
+  "tickets": [
+    {
+      "title": "Audit current consumers and adoption gaps",
+      "url": "https://github.com/elisealcala/chore-design/issues/7",
+      "number": 7,
+      "artifact": "docs/stage-1/INVENTORY.md"
+    },
+    {
+      "title": "Define profiles and reproducible tooling",
+      "url": "https://github.com/elisealcala/chore-design/issues/8",
+      "number": 8,
+      "artifact": "docs/stage-1/PROFILES-AND-TOOLING.md"
+    },
+    {
+      "title": "Specify portable adoption and update contracts",
+      "url": "https://github.com/elisealcala/chore-design/issues/9",
+      "number": 9,
+      "artifact": "docs/stage-1/DATA-CONTRACTS.md"
+    },
+    {
+      "title": "Define PR design-review and billing policy",
+      "url": "https://github.com/elisealcala/chore-design/issues/10",
+      "number": 10,
+      "artifact": "docs/PR-REVIEW-RESEARCH.md"
+    }
+  ],
+  "status": "complete",
+  "completedAt": "2026-10-29"
+}

@@ -1,37 +1,30 @@
 # Implementation handoff
 
-Snapshot: October 28, 2026. Check current GitHub issue states and repository changes before using this snapshot.
+Snapshot: October 29, 2026. Verify live issue states and working-tree changes before continuing.
 
-## Verified state
+Publication status: Stage 1 artifacts are complete locally. Public publication awaits explicit approval for the consumer audit metadata after automatic approval review rejected the push. Parent #1 and child tickets #7–#10 remain open until publication and final issue updates are complete. Do not start Stage 2 while this handoff step remains pending.
 
-- The roadmap includes six stages, shared CSS/components, reusable design guidance, and reminders for applicable library updates when project work resumes.
-- The initial inventory covers portfolio-nextjs, agents/studio, finances-app, OCC, and JDP. Reinspect their current sources in Stage 1.
-- This repository contains standalone stage specifications, architecture and decision records, project instructions, and contribution templates.
-- Public GitHub repository and private implementation board are created. Issues #1–#6 contain the six stages; #1 is ready and #2–#6 wait for their prerequisites. The board displays all six cards and their readiness labels.
-- No shared token generator, registry, agent skill, hook, release, or consumer integration is implemented.
-- No background or recurring automation is scheduled.
+## Completed
 
-GitHub repository, project, issue links, and preparation verification are recorded in `docs/TRACKING.md`. Stable identifiers are available in `.github/tracking.json`; live issue states remain authoritative.
+Stage 1 (parent #1; child issues #7–#10) delivered the current five-consumer inventory, profile requirements, Node/pnpm and fixture strategy, precise v1 field schemas and migration/upgrade semantics, source hashes, synthetic examples, and PR-review/cost research. See `docs/stage-1/VALIDATION.md` and `README.md` for evidence and artifact links.
+
+The project plan and roadmap were updated before the Stage 1 child tickets were created. Only Stage 1 tickets were added. The original six-stage sequence remains.
+
+Consumer repositories were read-only. Existing changes in agents and finances-app were preserved. The portfolio config mismatch has an exact correction documented for the pilot; it is not fixed in the application.
 
 ## Next action
 
-Start **[Stage 1: Audit and design contract — issue #1](https://github.com/elisealcala/chore-design/issues/1)**. Read `docs/stages/01-audit-and-contract.md`, inspect the current issue, and complete its checklist. Do not skip directly to component generation; exact schemas, tooling, and compatibility must be settled first.
+Continue with **[Stage 2 — CSS foundations, issue #2](https://github.com/elisealcala/chore-design/issues/2)** when implementation is requested. Read its stage specification and `docs/stage-1/PROFILES-AND-TOOLING.md`. Create the pinned workspace, executable validators for `DATA-CONTRACTS.md`, canonical token source and generated Tailwind 3/4 adapters. Use recorded examples/failure cases; verify actual resolved fixture versions and lockfiles.
 
-## Continue without the original session
+## Validation and limits
 
-1. Read `AGENTS.md`, `README.md`, `docs/DECISIONS.md`, `docs/ARCHITECTURE.md`, and the current stage specification.
-2. Verify current Git status and GitHub issue/board state. If GitHub is unavailable, use the checked-in specifications and record that live status was not verified.
-3. Identify current project checkouts through explicit configuration or user-provided locations. Local inventory paths from a different machine are not portable.
-4. Implement the selected stage, run its required checks, and record evidence in the issue and this handoff.
-5. Leave a concrete next action, including unresolved questions, changed files, and the validation still required.
+- Passed: Git whitespace, relative document links, JSON parsing, source-evidence hashes rechecked against five consumers, and synthetic baseline digest/reference integrity.
+- Stage 1 delivered normative specifications. No library runtime, executable schema validator, registry installation, rendered UI review, or consumer build was performed or claimed.
+- No paid PR reviewer, API key, automatic review workflow, or recurring automation was enabled. The PR contract recommends deterministic checks with optional maintainer-requested AI critique; execution is later-stage work.
+- Personal subscription/billing allowances and a per-PR AI price were not established. Recheck official pricing and account settings before enabling model calls.
 
-## Handoff fields for future changes
+## Durable state
 
-Keep this file short. Replace outdated snapshot details and include:
+Public repository: `elisealcala/chore-design`. Private project: https://github.com/users/elisealcala/projects/2. Identifiers are in `.github/tracking.json` and `.github/stage-1-tickets.json`. The connector could read issues but could not write; the existing `gh` login performed issue updates. Its project scope is unavailable, so the signed-in browser manages project metadata.
 
-- Current stage and issue; completed requirements and pending checklist items.
-- Relevant commits/PRs and changed interfaces.
-- Exact validation commands, results, and any environment limitations.
-- Decisions added or changed, including compatibility or migration implications.
-- Whether artifacts are merely implemented, validated, released, or adopted by consumers.
-- The next specific action and any input genuinely required to proceed.
+Follow `AGENTS.md`; read the current issue, decisions and relevant stage files. Keep this handoff current with completed/pending work, exact checks, evidence, limitations and the next action. No originating chat is required.
