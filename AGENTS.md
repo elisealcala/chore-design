@@ -37,4 +37,4 @@ This repository is the durable source for shared UI design orchestration. Do not
 - Record new architectural choices in `docs/DECISIONS.md` and update stage specifications if scope changes.
 - Distinguish implemented, checked, released, and adopted. Do not mark a stage complete based on files existing without its required validation.
 
-Current state: preparation only. No shared runtime, skill installation, update check, or consumer integration exists until a later implementation change establishes it.
+Read `docs/HANDOFF.md` for current implementation state. Keep it accurate as code, releases, and consumer integrations are added.

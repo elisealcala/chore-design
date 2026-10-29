@@ -19,7 +19,11 @@ All stage issues include implementation checklists, acceptance/validation criter
 
 ## Preparation checks
 
-Verify relative document links, six stage specifications and tracking identifiers, original-brief preservation, Git whitespace checks, remote repository visibility, and issue contents before completing setup. There is no runtime to build or test yet.
+- Passed: relative document links, all six stage references, tracking identifiers, and preservation of the original supplied brief.
+- Passed: remote repository is private with `main` as its default branch; all 18 preparation files are published.
+- Passed: six open issue bodies match their checked-in specifications, with the expected readiness labels and prerequisite links.
+- Project creation, private visibility, description/README, default repository, and addition of all six stage issues were verified in GitHub's browser interface. All six cards are in Todo; their `ready`/`blocked` labels are displayed and the view persisted after reload.
+- Passed: final preparation changes clear Git whitespace checks. There is no runtime to build or test yet.
 
 ## Continuing elsewhere
 
