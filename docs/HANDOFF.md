@@ -16,6 +16,8 @@ The user reported verifying issue #15 on October 29, 2026; the browser, environm
 
 ## Stage 3 in progress
 
+Process blocker (October 30, 2026): Stage 3 repeatedly stopped after partial implementation rather than completing its five subissues and acceptance criteria. Resolve this blocker only when #16–#20 are verified and all Stage 3 acceptance criteria pass; keep #3 in progress until then. The user requested one commit per completed subissue and automated installation, Playwright, and CI evidence.
+
 Parent #3 is in progress; sub-issues #16–#20 are open. `shadcn` 4.21.1 is pinned and `pnpm registry:build` builds an experimental Button artifact. The Button has not been installed in a consumer, compiled with React, or tested for interactive behavior; it is not released. `pnpm check` passed the existing Stage 2 tests after the tool installation. Continue with item metadata, dependencies, clean installation fixtures and component implementation; see `docs/stage-3/VALIDATION.md`. The board was updated with #3 in progress.
 
 ## Playwright priority — October 29, 2026
