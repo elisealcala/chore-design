@@ -24,6 +24,8 @@ A pinned Playwright suite now generates repeatable foundation screenshots and br
 
 This does not complete issue #3 or #20: only static token fixtures are covered, and registry components and installed React examples remain missing. Extend the suite as those components are implemented, then verify the full Stage 3 acceptance criteria. No issue was closed and no release or consumer adoption is claimed.
 
+A read-only GitHub Actions workflow now runs `pnpm check`, registry build, and Playwright checks on relevant pull requests and main pushes. It uploads browser evidence for three days. The 18 browser checks passed locally after adding the workflow; hosted CI execution still needs verification. Stage 3 requires extending Playwright to installed component examples in both Tailwind adapters and root/`src` layouts before closure.
+
 ## Completed
 
 Stage 1 (parent #1; child issues #7–#10) delivered the current five-consumer inventory, profile requirements, Node/pnpm and fixture strategy, precise v1 field schemas and migration/upgrade semantics, source hashes, synthetic examples, and PR-review/cost research. See `docs/stage-1/VALIDATION.md` and `README.md` for evidence and artifact links.

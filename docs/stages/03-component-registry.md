@@ -14,6 +14,8 @@ Provide installable, documented component source and reusable sections through a
 4. Build reusable page compositions and runnable examples.
 5. Verify installation, compatibility, accessibility and baseline capture.
 
+Playwright browser checks are a required gate for the installed examples. Extend the suite when each component group is added; the foundation fixtures alone do not satisfy this gate.
+
 ## Work
 
 - [ ] Verify the current registry schema/CLI and pin compatible tool versions.
@@ -23,6 +25,7 @@ Provide installable, documented component source and reusable sections through a
 - [ ] Declare runtime dependencies, portable install paths/aliases, registry dependencies, and versioned item metadata.
 - [ ] Provide runnable examples for variants, supported profiles, focus, disabled/error states where applicable, and keyboard behavior.
 - [ ] Build registry artifacts locally and test installation into clean fixtures for both Tailwind adapters.
+- [ ] Run automated browser checks on installed examples in both adapters and root/`src` layouts, covering keyboard interaction, disabled/error states, responsive profiles, and themes. Keep a CI workflow and review its evidence.
 - [ ] Specify baseline capture for installed items, so later upgrades can compare original/local/incoming source.
 
 ## Acceptance and validation

@@ -14,7 +14,8 @@
     "fixtures": "pnpm --filter \"./fixtures/*\" run build",
     "typecheck": "pnpm exec tsc --noEmit",
     "registry:build": "shadcn build registry.json --output registry/dist",
-    "test:browser": "pnpm build && pnpm fixtures && playwright test"
+    "test:browser": "pnpm build && pnpm fixtures && playwright test",
+    "test:browser:run": "playwright test"
   },
   "devDependencies": {
     "@playwright/test": "1.56.1",
