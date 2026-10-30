@@ -24,7 +24,7 @@ A pinned Playwright suite now generates repeatable foundation screenshots and br
 
 This does not complete issue #3 or #20: only static token fixtures are covered, and registry components and installed React examples remain missing. Extend the suite as those components are implemented, then verify the full Stage 3 acceptance criteria. No issue was closed and no release or consumer adoption is claimed.
 
-A read-only GitHub Actions workflow now runs `pnpm check`, registry build, and Playwright checks on relevant pull requests and main pushes. It uploads browser evidence for three days. The 18 browser checks passed locally after adding the workflow; hosted CI execution still needs verification. Stage 3 requires extending Playwright to installed component examples in both Tailwind adapters and root/`src` layouts before closure.
+A read-only GitHub Actions workflow now runs `pnpm check`, registry build, and Playwright checks on relevant pull requests and main pushes. It uploads browser evidence for three days. The 18 browser checks passed locally and in [GitHub Actions run 40994204931](https://github.com/elisealcala/chore-design/actions/runs/40994204931); [the evidence artifact](https://github.com/elisealcala/chore-design/actions/runs/40994204931/artifacts/12950132935) uploaded successfully. Stage 3 requires extending Playwright to installed component examples in both Tailwind adapters and root/`src` layouts before closure. The automated foundation suite now provides stronger reduced-motion evidence than the earlier manual report, by emulating the browser preference in a repeatable test.
 
 ## Completed
 
