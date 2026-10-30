@@ -30,7 +30,7 @@ Provide installable, documented component source and reusable sections through a
 - [ ] All first-release items install and compile from documented artifacts without manual missing-file fixes.
 - [ ] Dependency resolution and installation paths work for both root and `src/` component layouts used by consumers.
 - [ ] Interactive components pass meaningful keyboard/focus and state checks.
-- [ ] Representative screens show correct responsive/profile behavior, with no accidental radius/shadow or global-style leakage.
+- [ ] Representative screens show correct responsive/profile behavior, with no accidental radius/shadow or global-style leakage. Use the Playwright suite for reproducible screenshots and extend it to installed registry examples; review captures and test interactive states rather than treating screenshots alone as proof.
 - [ ] Component/source ownership, compatibility limits, and local customization guidance are documented.
 - [ ] Update the issue and `docs/HANDOFF.md` with artifact locations and validation evidence.
 

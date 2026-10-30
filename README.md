@@ -55,3 +55,7 @@ The implementation instructions live in this repository. No previous chat, attac
 ## Development setup
 
 Use Node 22.22.0 and pnpm 10.9.0. Run `pnpm install --frozen-lockfile`, then `pnpm check` to generate tokens, run tests, and build both Tailwind fixtures. See [token usage and font licenses](packages/tokens/README.md). Generated `dist/` files are ignored and must be rebuilt. The packages are private and unreleased; see [the handoff](docs/HANDOFF.md) for current implementation status.
+
+## Browser evidence
+
+Install Chromium with `pnpm exec playwright install chromium --only-shell`, then run `pnpm test:browser`. The command rebuilds the fixtures, checks both adapters across profiles, themes and mobile/desktop widths, and writes named screenshots under `test-results/browser/`. That directory is regenerated on each run and is not committed. See [Stage 3 validation](docs/stage-3/VALIDATION.md) for the exact coverage and remaining registry work.

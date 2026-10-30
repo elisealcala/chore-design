@@ -13,9 +13,11 @@
     "check": "pnpm typecheck && pnpm build && pnpm test && pnpm fixtures && node --test fixtures/test/*.test.mjs",
     "fixtures": "pnpm --filter \"./fixtures/*\" run build",
     "typecheck": "pnpm exec tsc --noEmit",
-    "registry:build": "shadcn build registry.json --output registry/dist"
+    "registry:build": "shadcn build registry.json --output registry/dist",
+    "test:browser": "pnpm build && pnpm fixtures && playwright test"
   },
   "devDependencies": {
+    "@playwright/test": "1.56.1",
     "@types/node": "22.20.4",
     "@types/semver": "7.7.1",
     "semver": "7.7.2",

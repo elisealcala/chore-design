@@ -18,6 +18,12 @@ The user reported verifying issue #15 on October 29, 2026; the browser, environm
 
 Parent #3 is in progress; sub-issues #16–#20 are open. `shadcn` 4.21.1 is pinned and `pnpm registry:build` builds an experimental Button artifact. The Button has not been installed in a consumer, compiled with React, or tested for interactive behavior; it is not released. `pnpm check` passed the existing Stage 2 tests after the tool installation. Continue with item metadata, dependencies, clean installation fixtures and component implementation; see `docs/stage-3/VALIDATION.md`. The board was updated with #3 in progress.
 
+## Playwright priority — October 29, 2026
+
+A pinned Playwright suite now generates repeatable foundation screenshots and browser assertions before further Stage 3 work. `PLAYWRIGHT_BROWSERS_PATH=/private/tmp/chore-design-playwright pnpm test:browser` passed 18 tests on macOS Chromium headless 141.0.7390.37 after installing the matching browser. Sixteen screenshots were generated locally under `test-results/browser/`; one mobile capture was inspected. That directory is ignored and cleared on the next run. Browser startup required execution outside the restricted environment. See `docs/stage-3/VALIDATION.md` for coverage and limitations.
+
+This does not complete issue #3 or #20: only static token fixtures are covered, and registry components and installed React examples remain missing. Extend the suite as those components are implemented, then verify the full Stage 3 acceptance criteria. No issue was closed and no release or consumer adoption is claimed.
+
 ## Completed
 
 Stage 1 (parent #1; child issues #7–#10) delivered the current five-consumer inventory, profile requirements, Node/pnpm and fixture strategy, precise v1 field schemas and migration/upgrade semantics, source hashes, synthetic examples, and PR-review/cost research. See `docs/stage-1/VALIDATION.md` and `README.md` for evidence and artifact links.

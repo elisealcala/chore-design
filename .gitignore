@@ -9,3 +9,5 @@ coverage/
 *.log
 project-catalog.local.json
 .chore-design/local-state.json
+test-results/
+playwright-report/
