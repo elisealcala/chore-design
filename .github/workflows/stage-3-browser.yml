@@ -10,6 +10,7 @@ on:
       - 'registry.json'
       - 'tests/browser/**'
       - 'playwright.config.mjs'
+      - 'playwright.registry.config.mjs'
       - 'package.json'
       - 'pnpm-lock.yaml'
   push:
@@ -22,6 +23,7 @@ on:
       - 'registry.json'
       - 'tests/browser/**'
       - 'playwright.config.mjs'
+      - 'playwright.registry.config.mjs'
       - 'package.json'
       - 'pnpm-lock.yaml'
   workflow_dispatch:
@@ -49,13 +51,17 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
       - run: pnpm registry:build
+      - run: pnpm registry:fixtures
       - run: pnpm exec playwright install --with-deps chromium --only-shell
       - run: pnpm test:browser:run
+      - run: pnpm test:registry
       - name: Upload browser evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: design-browser-evidence
-          path: test-results/browser/
+          path: |
+            test-results/browser/
+            test-results/registry-browser/
           if-no-files-found: ignore
           retention-days: 3

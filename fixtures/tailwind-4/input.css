@@ -2,3 +2,5 @@
 @import '../../packages/tokens/dist/tokens.css';
 @import '../../packages/tokens/dist/tailwind-v4.css';
 @source './index.html';
+@source '../../registry';
+@source '../../tests/browser/components';

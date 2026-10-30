@@ -1,0 +1,24 @@
+import * as React from 'react';
+import { createRoot } from 'react-dom/client';
+import { Button } from './components/ui/button';
+import { Input } from './components/ui/input';
+import { Textarea } from './components/ui/textarea';
+import { Label } from './components/ui/label';
+import { Card } from './components/ui/card';
+import { Badge } from './components/ui/badge';
+import { Table, TableHead, TableCell } from './components/ui/table';
+import { Select } from './components/ui/select';
+import { Checkbox } from './components/ui/checkbox';
+import { Dialog, DialogTrigger, DialogContent, DialogTitle, DialogDescription, DialogClose } from './components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from './components/ui/tabs';
+import { Separator } from './components/ui/separator';
+import { Container } from './components/ui/container';
+import { PageIntro } from './components/ui/page-intro';
+import { Section } from './components/ui/section';
+import { EmptyState } from './components/ui/empty-state';
+import './output.css';
+function App() { return <div className="min-h-screen bg-background text-foreground"><Container><PageIntro title="Design examples" description="Installed registry components" /><Section title="Controls"><Card><div className="grid gap-4"><Label htmlFor="name">Name</Label><Input id="name" aria-invalid="true" aria-describedby="error" /><p id="error">Name is required</p><Textarea aria-label="Description" /><Button>Save</Button><Button variant="secondary" disabled>Disabled</Button><div><Checkbox id="agree" /><Label htmlFor="agree">Agree</Label></div><Select aria-label="Choose an option" defaultValue=""><option value="" disabled>Choose</option><option value="one">One</option><option value="two">Two</option></Select><Dialog><DialogTrigger asChild><Button>Open dialog</Button></DialogTrigger><DialogContent><DialogTitle>Confirm action</DialogTitle><DialogDescription>Review your choice.</DialogDescription><DialogClose asChild><Button>Close</Button></DialogClose></DialogContent></Dialog><Tabs defaultValue="first"><TabsList aria-label="Example tabs"><TabsTrigger value="first">First</TabsTrigger><TabsTrigger value="second">Second</TabsTrigger></TabsList><TabsContent value="first">First panel</TabsContent><TabsContent value="second">Second panel</TabsContent></Tabs><Badge>Active</Badge><Separator /><Table><thead><tr><TableHead>Item</TableHead></tr></thead><tbody><tr><TableCell>Example</TableCell></tr></tbody></Table></div></Card></Section><EmptyState title="No items" description="Add an item to get started." /><div data-testid="unrelated" style={{borderRadius: '13px', boxShadow: 'none'}}>Unrelated content</div></Container></div>; }
+const params = new URLSearchParams(location.search);
+document.documentElement.dataset.designProfile = params.get('profile') || 'application';
+document.documentElement.dataset.designTheme = params.get('theme') || 'light';
+createRoot(document.getElementById('root')!).render(<App />);

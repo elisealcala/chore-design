@@ -58,3 +58,17 @@ Follow `AGENTS.md`; read the current issue, decisions and relevant stage files. 
 ## Registry metadata work in progress
 
 Issue #16: `registry/versions.json` now records an unreleased draft item version, and `pnpm registry:build` checks that every catalog item has a valid version and readable, safe source paths before running shadcn. The registry build passed. This does not yet validate dependency declarations, installation paths, or release artifacts; #16 remains open. Continue with the remaining Stage 3 items and verify installed components with Playwright before closing issues.
+
+## Accessibility checks — October 30, 2026
+
+Added pinned axe-core Playwright checks and a local React component fixture. Nine checks passed and one is explicitly skipped: a full-page scan with Select open reports `aria-hidden-focus` on the background in all eight profile/theme/adapter combinations. Investigate the finding, focus containment, and assistive-technology behavior before considering it resolved. `pnpm check` passed; see `docs/stage-3/VALIDATION.md` for exact scope, commands, and limitations. These tests import source directly and do not replace installed-consumer validation or manual accessibility review. Hosted CI for this change has not been checked. No issue was closed. Live issue state could not be retrieved because GitHub was unreachable from this environment.
+
+## Draft registry installation progress — October 30, 2026
+
+The 16-item draft catalog, local installation guidance, four clean React installation fixtures, schema-validated draft baseline captures, and installed-example browser suite are in the working tree. `pnpm registry:fixtures` passed for Tailwind 3/4 with root/`src` layouts, `pnpm check` passed, and the installed suite passed 36/36. The full foundation/accessibility suite passed 27 with 37 skips: 36 installed tests run separately and the full-page select axe test remains intentionally unresolved. See `docs/stage-3/VALIDATION.md` for commands and evidence. The updated workflow has not been verified on GitHub Actions; none of these results establish release or consumer adoption.
+
+Continue Stage 3 by investigating the documented select `aria-hidden-focus` finding and focus containment with appropriate accessibility review, verifying the updated hosted workflow and its artifacts, completing the remaining acceptance review, and recording per-subissue commits and issue/board updates only when justified. Issues #3 and #16–#20 remain open. Preserve other concurrent working-tree changes.
+
+## Native Select follow-up — October 30, 2026
+
+The draft Select now uses the native HTML control instead of the Radix popup, removing the mechanism behind the earlier full-page `aria-hidden-focus` finding. The former skipped test was removed; full-page axe checks pass on the focused native control in all eight adapter/profile/theme combinations. The installed-fixture suite verifies focus and selection with Playwright's `selectOption`; native popup arrow-key selection and screen-reader behavior remain unverified in this environment. See `docs/stage-3/VALIDATION.md` and `docs/DECISIONS.md`. Hosted CI and the subissue/parent status updates remain pending.
