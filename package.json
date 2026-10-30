@@ -9,11 +9,11 @@
   },
   "scripts": {
     "build": "node packages/tokens/src/generate.mjs && pnpm exec tsc -p tsconfig.types.json",
-    "test": "node --test packages/*/test/*.test.mjs",
+    "test": "node --test packages/*/test/*.test.mjs registry/test/*.test.mjs",
     "check": "pnpm typecheck && pnpm build && pnpm test && pnpm fixtures && node --test fixtures/test/*.test.mjs",
     "fixtures": "pnpm --filter \"./fixtures/*\" run build",
     "typecheck": "pnpm exec tsc --noEmit",
-    "registry:build": "shadcn build registry.json --output registry/dist",
+    "registry:build": "node registry/scripts/validate-metadata.mjs && shadcn build registry.json --output registry/dist",
     "test:browser": "pnpm build && pnpm fixtures && playwright test",
     "test:browser:run": "playwright test"
   },

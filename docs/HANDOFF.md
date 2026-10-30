@@ -52,3 +52,7 @@ Continue **[Stage 3 — component registry, issue #3](https://github.com/eliseal
 Public repository: `elisealcala/chore-design`. Private project: https://github.com/users/elisealcala/projects/2. Identifiers are in `.github/tracking.json` and `.github/stage-1-tickets.json`. The connector could read issues but could not write; the existing `gh` login performed issue updates. Its project scope is unavailable, so the signed-in browser manages project metadata.
 
 Follow `AGENTS.md`; read the current issue, decisions and relevant stage files. Keep this handoff current with completed/pending work, exact checks, evidence, limitations and the next action. No originating chat is required.
+
+## Registry metadata work in progress
+
+Issue #16: `registry/versions.json` now records an unreleased draft item version, and `pnpm registry:build` checks that every catalog item has a valid version and readable, safe source paths before running shadcn. The registry build passed. This does not yet validate dependency declarations, installation paths, or release artifacts; #16 remains open. Continue with the remaining Stage 3 items and verify installed components with Playwright before closing issues.
