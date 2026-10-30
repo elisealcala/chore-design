@@ -2,7 +2,7 @@
 
 Shared design guidance, CSS foundations, and shadcn/ui components for Elizabeth's projects.
 
-**Status: Stage 3 in progress.** Stage 1 audit and contracts are documented. A token generator, v1 validators, and Tailwind 3/4 fixtures are in the repository; the unreleased registry now has a draft component catalog and clean installation fixtures; accessibility investigation and hosted CI verification remain open. The design skill, update checker, and consumer integrations remain future work.
+**Status: Stage 3 verified on pull request #21; merge pending.** The unreleased registry and clean installation fixtures passed local and hosted checks. The design skill, update checker, consumer integrations, and release remain future work.
 
 [Repository](https://github.com/elisealcala/chore-design) · [Implementation project](https://github.com/users/elisealcala/projects/2) · [Issues](https://github.com/elisealcala/chore-design/issues) · [Tracking record](docs/TRACKING.md)
 
@@ -14,7 +14,7 @@ Read [AGENTS.md](AGENTS.md), the [current handoff](docs/HANDOFF.md), and the [ro
 | --- | --- | --- | --- | --- |
 | 1 | [Audit and design contract](docs/stages/01-audit-and-contract.md) | [#1](https://github.com/elisealcala/chore-design/issues/1) | 1 day | Complete |
 | 2 | [CSS foundations](docs/stages/02-css-foundations.md) | [#2](https://github.com/elisealcala/chore-design/issues/2) | 2 days | Complete |
-| 3 | [Component registry](docs/stages/03-component-registry.md) | [#3](https://github.com/elisealcala/chore-design/issues/3) | 3–4 days | In progress |
+| 3 | [Component registry](docs/stages/03-component-registry.md) | [#3](https://github.com/elisealcala/chore-design/issues/3) | 3–4 days | Verified on PR; merge pending |
 | 4 | [Design agent and update reminders](docs/stages/04-agent-and-reminders.md) | [#4](https://github.com/elisealcala/chore-design/issues/4) | 2–3 days | Stage 3 |
 | 5 | [Pilot integrations](docs/stages/05-pilot-integrations.md) | [#5](https://github.com/elisealcala/chore-design/issues/5) | 2 days | Stage 4 |
 | 6 | [Release and adoption](docs/stages/06-release-and-adoption.md) | [#6](https://github.com/elisealcala/chore-design/issues/6) | 1–3 days | Stage 5 |
@@ -58,4 +58,4 @@ Use Node 22.22.0 and pnpm 10.9.0. Run `pnpm install --frozen-lockfile`, then `pn
 
 ## Browser evidence
 
-Install Chromium with `pnpm exec playwright install chromium --only-shell`, then run `pnpm test:browser`. The command rebuilds the fixtures, checks both adapters across profiles, themes and mobile/desktop widths, and writes named screenshots under `test-results/browser/`. That directory is regenerated on each run and is not committed. See [Stage 3 validation](docs/stage-3/VALIDATION.md) for the exact coverage and remaining registry work.
+Install Chromium with `pnpm exec playwright install chromium --only-shell`, then run `pnpm test:browser`. The command rebuilds the fixtures, checks both adapters across profiles, themes and mobile/desktop widths, and writes named screenshots under `test-results/browser/`. That directory is regenerated on each run and is not committed. See [Stage 3 validation](docs/stage-3/VALIDATION.md) for the exact coverage and remaining limitations.

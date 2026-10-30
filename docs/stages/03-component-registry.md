@@ -1,6 +1,6 @@
 # Stage 3 — Component registry
 
-Effort: 3–4 working days. Dependency: Stage 2 accepted. Status: in progress; Stage 2 accepted based on user verification.
+Effort: 3–4 working days. Dependency: Stage 2 accepted. Status: verified on PR #21; merge to main pending. Stage 2 accepted based on user verification.
 
 ## Outcome
 
@@ -18,24 +18,24 @@ Playwright browser checks are a required gate for the installed examples. Extend
 
 ## Work
 
-- [ ] Verify the current registry schema/CLI and pin compatible tool versions.
-- [ ] Build Button, Input, Textarea, Label, Select, Checkbox, Dialog, Tabs, Card, Badge, Table, and Separator.
-- [ ] Add Container, PageIntro, Section, and EmptyState compositions.
-- [ ] Use the agreed tokens/profiles and preserve appropriate existing primitive conventions.
-- [ ] Declare runtime dependencies, portable install paths/aliases, registry dependencies, and versioned item metadata.
-- [ ] Provide runnable examples for variants, supported profiles, focus, disabled/error states where applicable, and keyboard behavior.
-- [ ] Build registry artifacts locally and test installation into clean fixtures for both Tailwind adapters.
-- [ ] Run automated browser checks on installed examples in both adapters and root/`src` layouts, covering keyboard interaction, disabled/error states, responsive profiles, and themes. Keep a CI workflow and review its evidence.
-- [ ] Specify baseline capture for installed items, so later upgrades can compare original/local/incoming source.
+- [x] Verify the current registry schema/CLI and pin compatible tool versions.
+- [x] Build Button, Input, Textarea, Label, Select, Checkbox, Dialog, Tabs, Card, Badge, Table, and Separator.
+- [x] Add Container, PageIntro, Section, and EmptyState compositions.
+- [x] Use the agreed tokens/profiles and preserve appropriate existing primitive conventions.
+- [x] Declare runtime dependencies, portable install paths/aliases, registry dependencies, and versioned item metadata.
+- [x] Provide runnable examples for variants, supported profiles, focus, disabled/error states where applicable, and keyboard behavior.
+- [x] Build registry artifacts locally and test installation into clean fixtures for both Tailwind adapters.
+- [x] Run automated browser checks on installed examples in both adapters and root/`src` layouts, covering keyboard interaction, disabled/error states, responsive profiles, and themes. Keep a CI workflow and review its evidence.
+- [x] Specify baseline capture for installed items, so later upgrades can compare original/local/incoming source.
 
 ## Acceptance and validation
 
-- [ ] All first-release items install and compile from documented artifacts without manual missing-file fixes.
-- [ ] Dependency resolution and installation paths work for both root and `src/` component layouts used by consumers.
-- [ ] Interactive components pass meaningful keyboard/focus and state checks.
-- [ ] Representative screens show correct responsive/profile behavior, with no accidental radius/shadow or global-style leakage. Use the Playwright suite for reproducible screenshots and extend it to installed registry examples; review captures and test interactive states rather than treating screenshots alone as proof.
-- [ ] Component/source ownership, compatibility limits, and local customization guidance are documented.
-- [ ] Update the issue and `docs/HANDOFF.md` with artifact locations and validation evidence.
+- [x] All first-release items install and compile from documented artifacts without manual missing-file fixes.
+- [x] Dependency resolution and installation paths work for both root and `src/` component layouts used by consumers.
+- [x] Interactive components pass meaningful keyboard/focus and state checks.
+- [x] Representative screens show correct responsive/profile behavior, with no accidental radius/shadow or global-style leakage. Use the Playwright suite for reproducible screenshots and extend it to installed registry examples; review captures and test interactive states rather than treating screenshots alone as proof.
+- [x] Component/source ownership, compatibility limits, and local customization guidance are documented.
+- [x] Update the issue and `docs/HANDOFF.md` with artifact locations and validation evidence.
 
 ## Scope limits
 

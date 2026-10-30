@@ -14,11 +14,11 @@ Detailed evidence: `docs/stage-2/VALIDATION.md`. Validation: Node 22.22.0, pnpm 
 
 The user reported verifying issue #15 on October 29, 2026; the browser, environment, profile matrix and raw output were not supplied. Temporary fixture CSS with the media condition replaced by `all` produced 0ms durations in all eight profile/theme/adapter combinations; this simulates a match and does not verify browser/OS preference handling. Issues #11–#15 and parent #2 are complete. Re-run `pnpm check` after any changes. Stage 4 will implement adoption freshness, version selection, migrations and transactional upgrades using the Stage 2 validators. Production shadcn component installation remains Stage 3.
 
-## Stage 3 in progress
+## Stage 3 earlier snapshot
 
 Process blocker (October 30, 2026): Stage 3 repeatedly stopped after partial implementation rather than completing its five subissues and acceptance criteria. Resolve this blocker only when #16–#20 are verified and all Stage 3 acceptance criteria pass; keep #3 in progress until then. The user requested one commit per completed subissue and automated installation, Playwright, and CI evidence.
 
-Parent #3 is in progress; sub-issues #16–#20 are open. `shadcn` 4.21.1 is pinned and `pnpm registry:build` builds an experimental Button artifact. The Button has not been installed in a consumer, compiled with React, or tested for interactive behavior; it is not released. `pnpm check` passed the existing Stage 2 tests after the tool installation. Continue with item metadata, dependencies, clean installation fixtures and component implementation; see `docs/stage-3/VALIDATION.md`. The board was updated with #3 in progress.
+At this earlier snapshot, parent #3 was in progress and sub-issues #16–#20 were open. `shadcn` 4.21.1 is pinned and `pnpm registry:build` builds an experimental Button artifact. The Button has not been installed in a consumer, compiled with React, or tested for interactive behavior; it is not released. `pnpm check` passed the existing Stage 2 tests after the tool installation. Continue with item metadata, dependencies, clean installation fixtures and component implementation; see `docs/stage-3/VALIDATION.md`. The board was updated with #3 in progress.
 
 ## Playwright priority — October 29, 2026
 
@@ -40,7 +40,7 @@ Consumer repositories were read-only. Existing changes in agents and finances-ap
 
 PR design-check execution is explicitly tracked in existing Stage 4 issue #4, real PR validation in Stage 5 issue #5, and release/onboarding in Stage 6 issue #6. Stage 1 delivered policy/research only. No new later-stage tickets or paid integrations were created by this scope clarification. Re-estimate Stage 4/pilot effort after selecting the check suite.
 
-Continue **[Stage 3 — component registry, issue #3](https://github.com/elisealcala/chore-design/issues/3)** using `docs/stages/03-component-registry.md`. Verify current issue states and complete its acceptance criteria before marking it done.
+Review and merge [PR #21](https://github.com/elisealcala/chore-design/pull/21) before starting Stage 4 from main. See the Stage 3 verified entry below for evidence and limitations.
 
 ## Validation and limits
 
@@ -72,3 +72,9 @@ Continue Stage 3 by investigating the documented select `aria-hidden-focus` find
 ## Native Select follow-up — October 30, 2026
 
 The draft Select now uses the native HTML control instead of the Radix popup, removing the mechanism behind the earlier full-page `aria-hidden-focus` finding. The former skipped test was removed; full-page axe checks pass on the focused native control in all eight adapter/profile/theme combinations. The installed-fixture suite verifies focus and selection with Playwright's `selectOption`; native popup arrow-key selection and screen-reader behavior remain unverified in this environment. See `docs/stage-3/VALIDATION.md` and `docs/DECISIONS.md`. Hosted CI and the subissue/parent status updates remain pending.
+
+## Stage 3 verified — October 30, 2026
+
+[PR #21](https://github.com/elisealcala/chore-design/pull/21) contains five commits, one for each subissue #16–#20. [GitHub Actions run 41086122692](https://github.com/elisealcala/chore-design/actions/runs/41086122692) passed the full installation, build and browser workflow; representative hosted captures in [the evidence artifact](https://github.com/elisealcala/chore-design/actions/runs/41086122692/artifacts/12991427969) were inspected. See `docs/stage-3/VALIDATION.md` for exact coverage and limitations. Native Select replaces the earlier Radix popup; screen-reader and macOS headless native popup arrow-key behavior remain unverified. No consumer has adopted the registry and no release has been published.
+
+The PR is a draft and has not been merged. Stage 4 can begin against the merged Stage 3 sources after PR #21 is reviewed and merged; do not infer that `main` contains this implementation. Issues #16–#20 and #3 are closed; the project board shows Stage 3 and all five subissues in Done. The PR remains draft and unmerged.
