@@ -1,0 +1,2 @@
+import * as React from "react";
+export function Input(props: React.ComponentPropsWithoutRef<"input">) { return <input {...props} className={`w-full min-h-12 rounded-md border border-border bg-input px-3 text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring disabled:cursor-not-allowed disabled:opacity-50 aria-[invalid=true]:border-destructive ${props.className ?? ""}`} />; }

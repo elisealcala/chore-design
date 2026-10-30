@@ -5,31 +5,31 @@
       "number": 16,
       "title": "Pin registry tooling and define artifact metadata",
       "url": "https://github.com/elisealcala/chore-design/issues/16",
-      "status": "open"
+      "status": "closed"
     },
     {
       "number": 17,
       "title": "Build basic controls and content primitives",
       "url": "https://github.com/elisealcala/chore-design/issues/17",
-      "status": "open"
+      "status": "closed"
     },
     {
       "number": 18,
       "title": "Build accessible interactive primitives",
       "url": "https://github.com/elisealcala/chore-design/issues/18",
-      "status": "open"
+      "status": "closed"
     },
     {
       "number": 19,
       "title": "Create reusable compositions and examples",
       "url": "https://github.com/elisealcala/chore-design/issues/19",
-      "status": "open"
+      "status": "closed"
     },
     {
       "number": 20,
       "title": "Verify registry installation and adoption baselines",
       "url": "https://github.com/elisealcala/chore-design/issues/20",
-      "status": "open"
+      "status": "closed"
     }
   ]
 }

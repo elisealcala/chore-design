@@ -15,15 +15,24 @@
     "typecheck": "pnpm exec tsc --noEmit",
     "registry:build": "node registry/scripts/validate-metadata.mjs && shadcn build registry.json --output registry/dist",
     "test:browser": "pnpm build && pnpm fixtures && playwright test",
-    "test:browser:run": "playwright test"
+    "test:browser:run": "playwright test",
+    "registry:fixtures": "pnpm build && pnpm registry:build && node registry/scripts/install-fixtures.mjs",
+    "test:registry": "REGISTRY_FIXTURES=1 playwright test tests/browser/registry.spec.mjs --config=playwright.registry.config.mjs"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
     "@playwright/test": "1.56.1",
     "@types/node": "22.20.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "@types/semver": "7.7.1",
+    "radix-ui": "1.6.7",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
     "semver": "7.7.2",
     "shadcn": "4.21.1",
     "typescript": "5.9.3",
+    "vite": "^7.3.7",
     "zod": "4.6.5"
   }
 }

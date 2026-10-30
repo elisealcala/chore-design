@@ -2,6 +2,21 @@
   "schemaVersion": 1,
   "release": null,
   "items": {
-    "button": "0.1.0"
+    "button": "0.1.0",
+    "input": "0.1.0",
+    "textarea": "0.1.0",
+    "label": "0.1.0",
+    "card": "0.1.0",
+    "badge": "0.1.0",
+    "table": "0.1.0",
+    "select": "0.1.0",
+    "checkbox": "0.1.0",
+    "dialog": "0.1.0",
+    "tabs": "0.1.0",
+    "separator": "0.1.0",
+    "container": "0.1.0",
+    "page-intro": "0.1.0",
+    "section": "0.1.0",
+    "empty-state": "0.1.0"
   }
 }

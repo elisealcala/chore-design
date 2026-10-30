@@ -55,3 +55,7 @@ These decisions preserve the agreed direction independently of the originating c
 - Node ESM JavaScript is checked with pinned TypeScript 5.9.3 and produces contract declarations. `checkJs` is enabled with implicit-any checking disabled; tightening it remains follow-up work.
 - Token package CSS includes physical root forwarding files as well as package exports because Tailwind 3's importer does not resolve the export map the same way as Tailwind 4. Packed-consumer builds verify both paths.
 - Tailwind fixtures target 3.4.17 and Studio's lockfile-resolved 4.3.3. Components and consumer integrations remain outside this stage.
+
+## Select primitive — October 30, 2026
+
+- The draft registry Select uses native HTML `<select>` and `<option>` rather than the earlier Radix Select popup. This removes the custom popup's background `aria-hidden-focus` finding and retains platform form, keyboard and assistive-technology semantics. Native popup presentation is controlled by the operating system; richer custom selects can be considered separately when needed. Other interactive components continue to use Radix.

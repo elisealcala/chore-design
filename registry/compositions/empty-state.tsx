@@ -1,0 +1,2 @@
+import * as React from "react";
+export function EmptyState({ title, description, children, ...props }: Omit<React.ComponentPropsWithoutRef<"div">, "title"> & { title: string; description: string }) { return <div {...props} className={`rounded-lg border border-border p-6 text-center ${props.className ?? ""}`}><h3 className="font-semibold">{title}</h3><p className="mt-2 text-muted-foreground">{description}</p>{children}</div>; }

@@ -11,7 +11,7 @@ test('registry metadata rejects missing, invalid and unsafe items', async () => 
   try {
     await mkdir(join(dir, 'registry/ui'), { recursive: true });
     await writeFile(join(dir, 'registry/ui/button.tsx'), 'export {}');
-    const catalog = { items: [{ name: 'button', files: [{ path: 'registry/ui/button.tsx' }] }] };
+    const catalog = { items: [{ name: 'button', type: 'registry:ui', files: [{ path: 'registry/ui/button.tsx', type: 'registry:ui' }] }] };
     const metadata = { schemaVersion: 1, release: null, items: { button: '0.1.0' } };
     const run = async () => {
       await writeFile(join(dir, 'registry.json'), JSON.stringify(catalog));
@@ -21,7 +21,9 @@ test('registry metadata rejects missing, invalid and unsafe items', async () => 
     assert.equal(await run(), 0);
     metadata.items.button = 'invalid'; assert.notEqual(await run(), 0);
     delete metadata.items.button; assert.notEqual(await run(), 0);
-    metadata.items.button = '0.1.0'; catalog.items[0].files[0].path = '../secret';
+    metadata.items.button = '0.1.0'; catalog.items[0].registryDependencies = ['missing']; assert.notEqual(await run(), 0);
+    catalog.items[0].registryDependencies = ['button']; assert.notEqual(await run(), 0);
+    delete catalog.items[0].registryDependencies; catalog.items[0].files[0].path = '../secret';
     assert.notEqual(await run(), 0);
   } finally { await rm(dir, { recursive: true, force: true }); }
 });
